@@ -1,0 +1,153 @@
+:root {
+    --bg-main: #0a0c14;
+    --bg-surface: rgba(30, 41, 59, 0.45);
+    --accent: #38bdf8;
+    --green-btn: #2ecc71;
+    --gold: #f59e0b;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+body {
+    background: var(--bg-main);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
+    background-attachment: fixed;
+    color: var(--text-main);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.hero-logo { 
+    width: 280px; 
+    height: auto;
+    margin-bottom: 25px; 
+    filter: drop-shadow(0 0 40px rgba(245, 158, 11, 0.45));
+}
+
+.hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.1; margin-bottom: 20px; }
+
+.hero-details {
+    max-width: 800px;
+    margin: 0 auto 35px auto;
+}
+
+.hero-details p {
+    color: var(--text-dim);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.hero-details b { color: var(--gold); }
+.gold-text { color: var(--gold); }
+
+.main-btn {
+    background: var(--gold);
+    color: #000;
+    padding: 16px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2);
+    display: inline-block;
+}
+
+.main-btn:hover { background: #fff; transform: translateY(-3px); }
+
+/* --- Apps Store Grid --- */
+.apps-section { 
+    padding: 10px 6% 80px 6%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.app-card {
+    background: var(--bg-surface);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-card:hover { 
+    transform: translateY(-10px); 
+    background: rgba(30, 41, 59, 0.7); 
+    border-color: var(--accent); 
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); 
+}
+
+.app-top { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
+.app-icon { width: 80px; height: 80px; border-radius: 20px; object-fit: cover; border: 2px solid rgba(255,255,255,0.08); }
+
+.title-grp h3 { font-size: 1.4rem; font-weight: 700; color: #fff; }
+.badge { font-size: 0.65rem; color: var(--accent); background: rgba(56, 189, 248, 0.1); padding: 4px 12px; border-radius: 50px; font-weight: 700; text-transform: uppercase; }
+
+.app-card p { color: var(--text-dim); line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem; flex-grow: 1; }
+
+/* Real-Time Download Counter Styling */
+.download-stats {
+    margin-bottom: 25px;
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: rgba(56, 189, 248, 0.08);
+    padding: 10px 18px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+}
+
+/* Green Download Button */
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--green-btn);
+    color: #000 !important;
+    padding: 18px;
+    border-radius: 18px;
+    text-decoration: none;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.download-btn:hover { background-color: #27ae60; transform: scale(1.02); }
+
+/* --- Footer --- */
+footer { padding: 80px 20px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); background: #06080c; }
+.footer-tags { margin-top: 15px; color: var(--text-dim); font-size: 0.9rem; }
+.footer-tags b { color: var(--gold); }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-logo { width: 240px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero { min-height: auto; padding-top: 60px; }
+    .app-grid { grid-template-columns: 1fr; }
+}
