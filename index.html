@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neyazuddin Adil | Official App Store</title>
+    <title>Premium App Store | Official Android Collection</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- TOP SECTION: Logo and Title -->
+    <!-- TOP SECTION: Logo, WhatsApp Button and Title -->
     <header class="hero">
         <div class="hero-content">
             <img src="logo.png" alt="Dev Logo" class="hero-logo">
+            
+            <!-- WHATSAPP JOIN BUTTON -->
+            <div class="follow-section">
+                <a href="https://chat.whatsapp.com/HL295guwuFFDs1z6fMyRH2?s=sh&p=a&mlu=1" class="follow-btn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> Join WhatsApp Group
+                </a>
+            </div>
+
             <h1 class="main-title">MY <span class="gold-text">APP STORE</span></h1>
         </div>
     </header>
 
-    <!-- APPS GRID: Apps list ab upar aa gayi hai -->
+    <!-- APPS GRID SECTION -->
     <section class="apps-section" id="apps">
         <div class="app-grid">
             
@@ -115,21 +123,28 @@
         </div>
     </section>
 
-    <!-- BOTTOM SECTION: Premium Collection Details -->
+    <!-- BOTTOM SECTION: General Details (No Name) -->
     <section class="details-section">
         <div class="details-content">
             <h2 class="gold-text">Premium Android Collection</h2>
-            <p>Welcome to the official digital hub of <b>Neyazuddin Adil</b>. We specialize in developing high-performance, secure, and user-centric Android applications. Our portfolio features elite multimedia tools, robust security utilities, and advanced gaming optimizers—all engineered for a seamless mobile experience. Explore our officially published APKs, built with cutting-edge technology and optimized for peak efficiency.</p>
+            <p>Welcome to the ultimate digital hub for premium Android applications. We specialize in providing high-performance, secure, and user-centric apps for your everyday needs. Our growing portfolio features elite multimedia tools, robust security utilities, and advanced gaming optimizers—all engineered for a seamless mobile experience. Explore our officially published APKs, built with cutting-edge technology and optimized for peak efficiency. Stay tuned as we continuously add more exciting apps to our collection.</p>
         </div>
     </section>
 
+    <!-- FOOTER: Policy Links -->
     <footer>
-        <p>&copy; 2025 <span class="gold-text">Neyazuddin Adil</span> | Professional Software Hub</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <span class="separator">|</span>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 <span class="gold-text">Official App Store</span> | All Rights Reserved</p>
         <div class="footer-tags">
             <span><i class="fa-brands fa-google-play"></i> Google Play Store: <b>COMING SOON</b></span>
         </div>
     </footer>
 
+    <!-- GitHub Download Counter Script -->
     <script>
         async function fetchDownloads() {
             const apps = [
