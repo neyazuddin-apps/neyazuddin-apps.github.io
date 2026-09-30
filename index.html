@@ -14,7 +14,7 @@
     <header class="hero">
         <div class="hero-content">
             <img src="logo.png" alt="Dev Logo" class="hero-logo">
-            <h1 class="main-title">OFFICIAL <span class="gold-text">APP STORE</span></h1>
+            <h1 class="main-title">My<span class="gold-text">APP STORE</span></h1>
         </div>
     </header>
 
@@ -31,7 +31,35 @@
                         <span class="badge">Multimedia</span>
                     </div>
                 </div>
-                <p>Premium 4K Video & Music Player featuring background playback and private vault.</p>
+
+                <!-- Features Box (Pehle wala paragraph hata diya) -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="vlite-btn" onclick="toggleLang('vlite')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="vlite-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4K Ultra HD:</b> Smooth playback up to 4K for MP4, MKV, AVI, etc.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Background Play:</b> Play video audio in background like MP3.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Private Vault:</b> Secret PIN-locked folder to hide personal videos &amp; photos.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Offline &amp; Safe:</b> Smooth gestures &amp; zero risk of data leakage.</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="vlite-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4K अल्ट्रा HD:</b> 4K तक सभी वीडियो और MP3 फॉर्मेट का स्मूथ प्लेबैक।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>बैकग्राउंड म्यूजिक:</b> वीडियो को MP3 की तरह बैकग्राउंड में चलाएं।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>प्राइवेट वॉल्ट:</b> पिन लॉक लगाकर अपनी पर्सनल फोटो-वीडियो छुपाएं।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% ऑफलाइन:</b> बिल्कुल सेफ, स्मूथ और यूज़र-फ्रेंडली ऐप।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/V-Lite-Player/releases/download/v1.0.0/V.Lite_1.0.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -46,7 +74,35 @@
                         <span class="badge">Utility</span>
                     </div>
                 </div>
-                <p>The ultimate scoreboard tool for Domino players. Track rounds and stats with ease.</p>
+
+                <!-- Features Box -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="domino-btn" onclick="toggleLang('domino')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="domino-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4-Player Scoreboard:</b> Track scores and rounds for up to 4 players.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Auto Calculation:</b> App automatically tallies totals with zero errors.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Rounds &amp; Stats:</b> See total rounds played and leader performance.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Universal Support:</b> Works for Dominoes, cards &amp; any round board game.</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="domino-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4 प्लेयर्स स्कोरकार्ड:</b> एक साथ 4 खिलाड़ियों के पॉइंट्स का सटीक हिसाब।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑटोमैटिक जोड़:</b> ऐप खुद सभी राउंड के स्कोर जोड़ेगा, गलती की गुंजाइश नहीं।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>राउंड स्टैट्स:</b> कुल कितने राउंड गेम चला और किसका स्कोर सबसे आगे है।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>सभी गेम्स के लिए:</b> डोमिनो, ताश या किसी भी राउंड वाले गेम में काम करे।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/Domino-Score-/releases/download/v1.0.0/Domino.Score_1.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -61,7 +117,35 @@
                         <span class="badge">Productivity</span>
                     </div>
                 </div>
-                <p>Secure personal journal with advanced lock features to protect your daily thoughts.</p>
+
+                <!-- Features Box -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="note-btn" onclick="toggleLang('note')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="note-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Real Secret Vault:</b> Hide private photos &amp; videos secretly inside.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Fake PIN Decoy Mode:</b> Fake PIN opens a dummy diary so no one suspects.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Offline Backup &amp; Restore:</b> Saves directly to internal storage (Zero leak risk).</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Offline Working:</b> Pure offline security with smooth note-taking.</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="note-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>रियल सीक्रेट वॉल्ट:</b> डायरी के अंदर बिना किसी को पता चले फोटो-वीडियो छुपाएं।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>फेक पिन (नकली पासवर्ड):</b> नकली पिन डालने पर साधारण डायरी खुलेगी।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑफलाइन बैकअप-रीस्टोर:</b> डेटा सीधे फोन मेमोरी में सेव रहेगा, लीक का 0% डर।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% ऑफलाइन:</b> बिल्कुल सुरक्षित, स्मूथ और फास्ट नोट-डायरी ऐप।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/Note-Diary/releases/download/v1.0.0/Note.Diary_1.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -76,7 +160,35 @@
                         <span class="badge">Security</span>
                     </div>
                 </div>
-                <p>All-in-one security suite with app locking and intruder detection for your data.</p>
+
+                <!-- Features Box -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="privacy-btn" onclick="toggleLang('privacy')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="privacy-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Black Screen Shield:</b> Prevents shoulder surfers from peeping at your screen.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Shake to Activate:</b> Simply shake your phone to trigger the privacy curtain.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Triple-Tap to Close:</b> Tap rapidly 3 times to make the curtain disappear.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Double-Tap to Resize:</b> Tap 2 times to customize height (custom or full).</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="privacy-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>एंटी-पीपिंग काला पर्दा:</b> स्क्रीन पर पर्दा बना दे ताकि बगल वाला न झांक सके।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>हिलाते ही चालू (Shake):</b> फोन को हल्का सा हिलाते ही पर्दा ऑन हो जाएगा।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>3 बार टैप करके हटाएं:</b> पर्दे पर लगातार 3 बार दबाते ही पर्दा गायब होगा।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>2 बार टैप करके साइज बदलें:</b> लगातार 2 बार दबाकर पर्दा छोटा या फुल करें।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/Privacy-Guard/releases/download/v1.0.0/Privacy.Guard_1.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -91,7 +203,35 @@
                         <span class="badge">Gaming</span>
                     </div>
                 </div>
-                <p>Elite gaming optimizer. Boost FPS and reduce latency for smooth battle experience.</p>
+
+                <!-- Features Box -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="pubg-btn" onclick="toggleLang('pubg')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="pubg-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>RAM &amp; CPU Focus:</b> Stops background apps to divert 100% RAM to gaming.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Extreme Lag Fix:</b> Removes stutter &amp; delivers extreme smooth FPS gameplay.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Anti-Ban Safe:</b> Never modifies game files; only optimizes device hardware.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Device Cooling:</b> Unloads CPU pressure to prevent phone overheating.</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="pubg-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>रैम और सीपीयू फोकस:</b> बैकग्राउंड ऐप्स रोककर पूरी रैम गेम को ट्रांसफर करे।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>जीरो लैग और हाई FPS:</b> गेम का अटकना बंद करे और सुपर स्मूथ स्पीड दे।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% सुरक्षित (नो बैन):</b> गेम फाइल्स से छेड़छाड़ नहीं करता, 0% बैन रिस्क।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>फोन कूलिंग:</b> प्रोसेसर पर लोड घटाकर गेमिंग के दौरान फोन गर्म होने से बचाए।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/PUBG-Turbo/releases/download/v1.0.0/PUBG.TURBO_1.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -106,7 +246,35 @@
                         <span class="badge">Utility</span>
                     </div>
                 </div>
-                <p>Digital trip logbook for drivers. Track earnings, diesel expenses, fuel balance, and trip stats securely.</p>
+
+                <!-- Features Box -->
+                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-star"></i> Key Features
+                        </span>
+                        <button type="button" id="driver-btn" onclick="toggleLang('driver')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
+                            🇮🇳 हिंदी में पढ़ें
+                        </button>
+                    </div>
+
+                    <!-- English Features -->
+                    <ul id="driver-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Trip &amp; Route Log:</b> Record load origin, route destination and trip counts.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Diesel &amp; Savings Ledger:</b> Log diesel amount spent, units bought &amp; fuel left.</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Auto Profit Calculation:</b> Deducts fuel from total freight automatically.</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Offline + Cloud Backup:</b> Works without network on highways &amp; syncs to Firebase.</li>
+                    </ul>
+
+                    <!-- Hindi Features -->
+                    <ul id="driver-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>गाड़ी लोड और रूट हिसाब:</b> गाड़ी कहां लोड हुई, कहां ले जाना है सब नोट करें।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>डीज़ल और टंकी बैलेंस:</b> कितना भाड़ा मिला, कितने का डीज़ल लिया और कितना बचा।</li>
+                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑटोमैटिक कुल बचत:</b> भाड़े में से डीज़ल का खर्चा काटकर खुद बची हुई कमाई बताए।</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑफलाइन + क्लाउड सिंक:</b> हाईवे पर बिना नेटवर्क भी काम करे और डेटा सुरक्षित रखे।</li>
+                    </ul>
+                </div>
+
                 <a href="https://github.com/neyazuddin-apps/Driver-Diary/releases/download/v1.0/Driver-Diary-v1.0.apk" class="download-btn">
                     <i class="fa-solid fa-download"></i> Download APK
                 </a>
@@ -134,18 +302,13 @@
         <!-- 🎨 COLORFUL & GLOWING GOOGLE PLAY STORE BADGE -->
         <div class="footer-tags" style="margin: 18px 0 20px 0;">
             <span style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); padding: 10px 22px; border-radius: 50px; border: 1px solid rgba(0, 230, 118, 0.35); box-shadow: 0 0 20px rgba(0, 230, 118, 0.18);">
-                <!-- Glowing Google Play Logo -->
                 <i class="fa-brands fa-google-play" style="color: #00E676; font-size: 1.35rem; filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.6));"></i>
-                
-                <!-- Colorful Gradient Title -->
-                <span style="background: linear-gradient(90deg, #38BDF8, #818CF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; font-size: 0.95rem;">Google Play Store:</span>
-                
-                <!-- Glowing Gold/Orange Coming Soon Badge -->
+                <span style="color: #FFE600; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px;">Google Play Store:</span>
                 <b style="background: linear-gradient(90deg, #F59E0B, #EF4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 0.95rem; letter-spacing: 1.2px; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.3));">COMING SOON</b>
             </span>
         </div>
 
-        <!-- SOCIAL & FEEDBACK LINKS (WhatsApp Removed) -->
+        <!-- SOCIAL & FEEDBACK LINKS -->
         <div class="social-footer" style="margin: 15px 0 25px 0; display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap;">
             
             <!-- 1. Instagram -->
@@ -166,11 +329,30 @@
             </a>
         </div>
 
-        <!-- COPYRIGHT: SABSE NICHE (BILKUL LAST MEIN) -->
+        <!-- COPYRIGHT: SABSE NICHE -->
         <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-dim); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px;">
             &copy; 2026 <span class="gold-text">Official App Store</span> | All Rights Reserved
         </p>
     </footer>
+
+    <!-- INTERACTIVE HINDI/ENGLISH TOGGLE JAVASCRIPT -->
+    <script>
+        function toggleLang(appId) {
+            const enList = document.getElementById(appId + '-en');
+            const hiList = document.getElementById(appId + '-hi');
+            const btn = document.getElementById(appId + '-btn');
+
+            if (hiList.style.display === 'none') {
+                hiList.style.display = 'block';
+                enList.style.display = 'none';
+                btn.innerHTML = '🇬🇧 View English';
+            } else {
+                hiList.style.display = 'none';
+                enList.style.display = 'block';
+                btn.innerHTML = '🇮🇳 हिंदी में पढ़ें';
+            }
+        }
+    </script>
 
 </body>
 </html>
