@@ -1,384 +1,1317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neyazuddin App Store | Official Android Collection</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <meta name="description" content="Explore practical Android apps by Neyazuddin Apps — V Lite Player, Domino Score, Note Diary, Privacy Guard, PUBG Turbo, Driver Diary, and Fee Diary.">
+  <meta name="author" content="Neyazuddin Apps">
+
+  <!-- Social Share Preview (Open Graph & Twitter) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Neyazuddin Apps — Android App Collection">
+  <meta property="og:description" content="07 practical Android tools for everyday life — multimedia, AES-256 vault, privacy curtain, scoreboard, trip ledger, and fee management.">
+  <meta property="og:image" content="logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neyazuddin Apps — Android App Collection">
+  <meta name="twitter:description" content="Lightweight, offline-first Android utilities crafted for everyday needs. Direct GitHub APK releases.">
+  <meta name="twitter:image" content="logo.png">
+
+  <title>Neyazuddin Apps — Android App Collection</title>
+
+  <!-- PWA Manifest & SVG Favicon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M20 44V20l24 24V20' stroke='%23f0cc8c' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Neyazuddin Apps — Android App Collection",
+    "description": "Independent Android developer collection offering multimedia, privacy, productivity, education, gaming, and utility applications.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Neyazuddin Apps",
+      "email": "neyazuddin8882@gmail.com"
+    }
+  }
+  </script>
 </head>
 <body>
+  <div class="page-shell" id="top">
+    <!-- Sticky Glass Navbar -->
+    <header class="site-header">
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Neyazuddin Apps home">
+          <img src="logo.png" data-image-name="logo.png" loading="eager" fetchpriority="high" alt="Neyazuddin Apps logo" class="brand-logo">
+          <span class="brand-name">NEYAZUDDIN <strong>APPS</strong></span>
+        </a>
 
-    <!-- TOP SECTION: Logo and Title -->
-    <header class="hero">
-        <div class="hero-content">
-            <img src="logo.png" alt="Dev Logo" class="hero-logo">
-            <h1 class="main-title">OFFICIAL <span class="gold-text">APP STORE</span></h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#apps">Apps</a>
+          <a href="#install-steps">Install</a>
+          <a href="#faq">FAQ</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="header-actions">
+          <button type="button" class="global-lang-btn" id="global-lang-toggle" aria-pressed="false" title="Switch language between English and Hindi">
+            <i class="fa-solid fa-language" aria-hidden="true"></i>
+            <span>हिंदी</span>
+          </button>
+          <a class="header-cta" href="#apps">
+            Explore <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+          </a>
         </div>
+      </div>
     </header>
 
-    <!-- APPS GRID SECTION -->
-    <section class="apps-section" id="apps">
-        <div class="app-grid">
-            
-            <!-- App 1: V Lite Player -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="vlite.png" alt="V Lite" class="app-icon">
-                    <div class="title-grp">
-                        <h3>V Lite Player</h3>
-                        <span class="badge">Multimedia</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="vlite-btn" onclick="toggleLang('vlite')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="vlite-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4K Ultra HD:</b> Smooth playback up to 4K for MP4, MKV, AVI, etc.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Background Play:</b> Play video audio in background like MP3.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Private Vault:</b> Secret PIN-locked folder to hide personal videos &amp; photos.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Offline &amp; Safe:</b> Smooth gestures &amp; zero risk of data leakage.</li>
-                    </ul>
-
-                    <ul id="vlite-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4K अल्ट्रा HD:</b> 4K तक सभी वीडियो और MP3 फॉर्मेट का स्मूथ प्लेबैक।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>बैकग्राउंड म्यूजिक:</b> वीडियो को MP3 की तरह बैकग्राउंड में चलाएं।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>प्राइवेट वॉल्ट:</b> पिन लॉक लगाकर अपनी पर्सनल फोटो-वीडियो छुपाएं।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% ऑफलाइन:</b> बिल्कुल सेफ, स्मूथ और यूज़र-फ्रेंडली ऐप।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/V-Lite-Player/releases/download/v1.0.0/V.Lite_1.0.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 2: Domino Score -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="domino.png" alt="Domino" class="app-icon">
-                    <div class="title-grp">
-                        <h3>Domino Score</h3>
-                        <span class="badge">Utility</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="domino-btn" onclick="toggleLang('domino')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="domino-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4-Player Scoreboard:</b> Track scores and rounds for up to 4 players.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Auto Calculation:</b> App automatically tallies totals with zero errors.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Rounds &amp; Stats:</b> See total rounds played and leader performance.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Universal Support:</b> Works for Dominoes, cards &amp; any round board game.</li>
-                    </ul>
-
-                    <ul id="domino-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>4 प्लेयर्स स्कोरकार्ड:</b> एक साथ 4 खिलाड़ियों के पॉइंट्स का सटीक हिसाब।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑटोमैटिक जोड़:</b> ऐप खुद सभी राउंड के स्कोर जोड़ेगा, गलती की गुंजाइश नहीं।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>राउंड स्टैट्स:</b> कुल कितने राउंड गेम चला और किसका स्कोर सबसे आगे है।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>सभी गेम्स के लिए:</b> डोमिनो, ताश या किसी भी राउंड वाले गेम में काम करे।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/Domino-Score-/releases/download/v1.0.0/Domino.Score_1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 3: Note Diary -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="note.png" alt="Note Diary" class="app-icon">
-                    <div class="title-grp">
-                        <h3>Note Diary</h3>
-                        <span class="badge">Productivity</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="note-btn" onclick="toggleLang('note')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="note-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Real Secret Vault:</b> Hide private photos &amp; videos secretly inside.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Fake PIN Decoy Mode:</b> Fake PIN opens a dummy diary so no one suspects.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Offline Backup &amp; Restore:</b> Saves directly to internal storage (Zero leak risk).</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Offline Working:</b> Pure offline security with smooth note-taking.</li>
-                    </ul>
-
-                    <ul id="note-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>रियल सीक्रेट वॉल्ट:</b> डायरी के अंदर बिना किसी को पता चले फोटो-वीडियो छुपाएं।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>फेक पिन (नकली पासवर्ड):</b> नकली पिन डालने पर साधारण डायरी खुलेगी।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑफलाइन बैकअप-रीस्टोर:</b> डेटा सीधे फोन मेमोरी में सेव रहेगा, लीक का 0% डर।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% ऑफलाइन:</b> बिल्कुल सुरक्षित, स्मूथ और फास्ट नोट-डायरी ऐप।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/Note-Diary/releases/download/v1.0.0/Note.Diary_1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 4: Privacy Guard -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="privacy.png" alt="Privacy Guard" class="app-icon">
-                    <div class="title-grp">
-                        <h3>Privacy Guard</h3>
-                        <span class="badge">Security</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="privacy-btn" onclick="toggleLang('privacy')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="privacy-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Black Screen Shield:</b> Prevents shoulder surfers from peeping at your screen.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Shake to Activate:</b> Simply shake your phone to trigger the privacy curtain.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Triple-Tap to Close:</b> Tap rapidly 3 times to make the curtain disappear.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Double-Tap to Resize:</b> Tap 2 times to customize height (custom or full).</li>
-                    </ul>
-
-                    <ul id="privacy-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>एंटी-पीपिंग काला पर्दा:</b> स्क्रीन पर पर्दा बना दे ताकि बगल वाला न झांक सके।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>हिलाते ही चालू (Shake):</b> फोन को हल्का सा हिलाते ही पर्दा ऑन हो जाएगा।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>3 बार टैप करके हटाएं:</b> पर्दे पर लगातार 3 बार दबाते ही पर्दा गायब होगा।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>2 बार टैप करके साइज बदलें:</b> लगातार 2 बार दबाकर पर्दा छोटा या फुल करें।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/Privacy-Guard/releases/download/v1.0.0/Privacy.Guard_1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 5: PUBG Turbo -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="pubg.png" alt="PUBG Turbo" class="app-icon">
-                    <div class="title-grp">
-                        <h3>PUBG Turbo</h3>
-                        <span class="badge">Gaming</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="pubg-btn" onclick="toggleLang('pubg')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="pubg-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>RAM &amp; CPU Focus:</b> Stops background apps to divert 100% RAM to gaming.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Extreme Lag Fix:</b> Removes stutter &amp; delivers extreme smooth FPS gameplay.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% Anti-Ban Safe:</b> Never modifies game files; only optimizes device hardware.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Device Cooling:</b> Unloads CPU pressure to prevent phone overheating.</li>
-                    </ul>
-
-                    <ul id="pubg-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>रैम और सीपीयू फोकस:</b> बैकग्राउंड ऐप्स रोककर पूरी रैम गेम को ट्रांसफर करे।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>जीरो लैग और हाई FPS:</b> गेम का अटकना बंद करे और सुपर स्मूथ स्पीड दे।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>100% सुरक्षित (नो बैन):</b> गेम फाइल्स से छेड़छाड़ नहीं करता, 0% बैन रिस्क।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>फोन कूलिंग:</b> प्रोसेसर पर लोड घटाकर गेमिंग के दौरान फोन गर्म होने से बचाए।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/PUBG-Turbo/releases/download/v1.0.0/PUBG.TURBO_1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 6: Driver Diary -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="driver.png" alt="Driver Diary" class="app-icon">
-                    <div class="title-grp">
-                        <h3>Driver Diary</h3>
-                        <span class="badge">Utility</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="driver-btn" onclick="toggleLang('driver')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <ul id="driver-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Trip &amp; Route Log:</b> Record load origin, route destination and trip counts.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Diesel &amp; Savings Ledger:</b> Log diesel amount spent, units bought &amp; fuel left.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Auto Profit Calculation:</b> Deducts fuel from total freight automatically.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Offline + Cloud Backup:</b> Works without network on highways &amp; syncs to Firebase.</li>
-                    </ul>
-
-                    <ul id="driver-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>गाड़ी लोड और रूट हिसाब:</b> गाड़ी कहां लोड हुई, कहां ले जाना है सब नोट करें।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>डीज़ल और टंकी बैलेंस:</b> कितना भाड़ा मिला, कितने का डीज़ल लिया और कितना बचा।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑटोमैटिक कुल बचत:</b> भाड़े में से डीज़ल का खर्चा काटकर खुद बची हुई कमाई बताए।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>ऑफलाइन + क्लाउड सिंक:</b> हाईवे पर बिना नेटवर्क भी काम करे और डेटा सुरक्षित रखे।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/Driver-Diary/releases/download/v1.0/Driver-Diary-v1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-            <!-- App 7: Fee Diary (NEW - 7th App) -->
-            <div class="app-card">
-                <div class="app-top">
-                    <img src="fee.png" alt="Fee Diary" class="app-icon">
-                    <div class="title-grp">
-                        <h3>Fee Diary</h3>
-                        <span class="badge">Education</span>
-                    </div>
-                </div>
-
-                <div class="features-box" style="margin-bottom: 20px; flex-grow: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 18px; padding: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.78rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px;">
-                            <i class="fa-solid fa-star"></i> Key Features
-                        </span>
-                        <button type="button" id="fee-btn" onclick="toggleLang('fee')" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: var(--accent); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; cursor: pointer;">
-                            🇮🇳 हिंदी में पढ़ें
-                        </button>
-                    </div>
-
-                    <!-- English Features -->
-                    <ul id="fee-en" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Student &amp; Parent Registry:</b> Track students with father's name, roll no &amp; phone.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Jan-Dec Session Records:</b> 12-month ledger with Year selector (2026, 2027...).</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Partial Payments &amp; Kist:</b> Collect installment fees with auto balance tracking.</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>Digital ID Card &amp; Receipts:</b> 1-click official WhatsApp receipts &amp; Student ID Card.</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>6-Digit PIN Security:</b> Tamper-proof fee locking with Firebase cloud backup.</li>
-                    </ul>
-
-                    <!-- Hindi Features -->
-                    <ul id="fee-hi" style="list-style: none; padding: 0; margin: 0; font-size: 0.83rem; color: #cbd5e1; line-height: 1.65; display: none;">
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>छात्र व पिता का नाम:</b> रोल नंबर, पिता का नाम और फोन नंबर के साथ पूरा रजिस्टर।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>जनवरी से दिसंबर सेशन:</b> साल (2026, 2027) सेलेक्टर के साथ 12 महीने का हिसाब।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>किस्त (पार्टिशियल फीस):</b> आधी फीस जमा करें, बाकी बैलेंस अपने आप दिखेगा।</li>
-                        <li style="margin-bottom: 5px;"><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>डिजिटल ID कार्ड व व्हाट्सऐप:</b> 1-क्लिक में व्हाट्सऐप फीस रसीद और पहचान पत्र भेजें।</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--green-btn); font-size: 0.75rem; margin-right: 6px;"></i><b>6-डिजिट पिन सुरक्षा:</b> फीस लॉक और 100% क्लाउड डेटा बैकअप।</li>
-                    </ul>
-                </div>
-
-                <a href="https://github.com/neyazuddin-apps/Fee-Diary/releases/download/v1.0/Fee-Diary-v1.0.apk" class="download-btn">
-                    <i class="fa-solid fa-download"></i> Download APK
-                </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- BOTTOM SECTION: 100% Safe & Trusted Apps Assurance -->
-    <section class="details-section">
-        <div class="details-content">
-            <h2 class="gold-text">Premium Android Collection</h2>
-            <p>Welcome to the ultimate digital hub for premium Android applications. We specialize in providing high-performance, secure, and user-centric apps for your everyday needs. Every APK published here is <b>100% safe, verified, and malware-free</b>, allowing you to download, install, and use our tools with complete peace of mind. Our growing portfolio features elite multimedia tools, robust security utilities, driver trip diaries, and advanced gaming optimizers—all engineered for a seamless mobile experience. Stay tuned as we continuously add more exciting apps to our collection.</p>
-        </div>
-    </section>
-
-    <!-- FOOTER: Policy Links, Play Store Badge, Socials & Bottom Copyright -->
-    <footer>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a>
-            <span class="separator">|</span>
-            <a href="terms.html">Terms &amp; Conditions</a>
-        </div>
-
-        <!-- 🎨 COLORFUL & GLOWING GOOGLE PLAY STORE BADGE -->
-        <div class="footer-tags" style="margin: 18px 0 20px 0;">
-            <span style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); padding: 10px 22px; border-radius: 50px; border: 1px solid rgba(0, 230, 118, 0.35); box-shadow: 0 0 20px rgba(0, 230, 118, 0.18);">
-                <i class="fa-brands fa-google-play" style="color: #00E676; font-size: 1.35rem; filter: drop-shadow(0 0 10px rgba(0, 230, 118, 0.6));"></i>
-                <span style="color: #FFE600; font-weight: 800; font-size: 0.95rem; letter-spacing: 0.5px;">Google Play Store:</span>
-                <b style="background: linear-gradient(90deg, #F59E0B, #EF4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800; font-size: 0.95rem; letter-spacing: 1.2px; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.3));">COMING SOON</b>
-            </span>
-        </div>
-
-        <!-- SOCIAL & FEEDBACK LINKS -->
-        <div class="social-footer" style="margin: 15px 0 25px 0; display: flex; justify-content: center; align-items: center; gap: 14px; flex-wrap: wrap;">
-            
-            <!-- 1. Instagram -->
-            <a href="https://instagram.com/neyazuddin__adil" target="_blank" style="color: #E1306C; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fa-brands fa-instagram"></i> Instagram
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            <span>INDEPENDENT ANDROID DEVELOPER</span>
+          </div>
+          <h1 id="hero-title">
+            Useful apps.<br>
+            <span class="gradient-text">Thoughtfully built.</span>
+          </h1>
+          <p class="hero-description">
+            A focused collection of practical Android tools crafted to make everyday tasks simpler, private, and genuinely organized—without unnecessary bloat.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#apps">
+              <span>Explore applications</span>
+              <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
             </a>
-            <span class="separator" style="color: #555;">|</span>
-            
-            <!-- 2. Facebook -->
-            <a href="https://www.facebook.com/profile.php?id=100048943242608" target="_blank" style="color: #1877F2; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fa-brands fa-facebook"></i> Facebook
-            </a>
-            <span class="separator" style="color: #555;">|</span>
+            <button type="button" class="secondary-button" id="hero-install-btn">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              <span>How to install APK</span>
+            </button>
+          </div>
 
-            <!-- 3. Feedback Gmail -->
-            <a href="mailto:neyazuddin8882@gmail.com?subject=App%20Feedback%20%26%20Suggestion&amp;body=Hi%20Neyazuddin,%0A%0AI%20am%20using%20your%20apps%20and%20wanted%20to%20share%20this%20feedback:%0A%0A" style="color: #EA4335; text-decoration: none; font-size: 0.95rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
-                <i class="fa-solid fa-envelope"></i> Send Feedback
-            </a>
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>07</strong>
+              <span>Android Tools</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric">
+              <strong>EN / हिं</strong>
+              <span>Bilingual Info</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric">
+              <strong>GitHub</strong>
+              <span>Verified Releases</span>
+            </div>
+          </div>
         </div>
 
-        <!-- COPYRIGHT: SABSE NICHE -->
-        <p style="margin-top: 20px; font-size: 0.85rem; color: var(--text-dim); border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 15px;">
-            &copy; 2026 <span class="gold-text">Official App Store</span> | All Rights Reserved
-        </p>
+        <!-- Interactive Scrollable Android Phone Showcase (All 07 Apps) -->
+        <div class="hero-showcase">
+          <button type="button" class="showcase-card showcase-back-left jump-app-btn" data-target="app-privacy" aria-label="Jump to Privacy Guard">
+            <img src="privacy.png" data-image-name="privacy.png" loading="eager" alt="" class="showcase-app-icon">
+            <div>
+              <strong>Privacy Guard</strong>
+              <span>Custom screen shield</span>
+            </div>
+          </button>
+
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-topbar">
+                <span>NEYAZUDDIN OS</span>
+                <span><i class="fa-solid fa-signal" aria-hidden="true"></i> <i class="fa-solid fa-battery-three-quarters" aria-hidden="true"></i></span>
+              </div>
+              <div class="phone-hero-widget">
+                <span class="widget-badge">SCROLL &amp; TAP TO JUMP</span>
+                <h3>All 07 Apps</h3>
+                <p>Scroll list &amp; tap any app to inspect</p>
+              </div>
+              <div class="phone-app-list" aria-label="Scrollable list of all 7 apps">
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-vlite">
+                  <img src="vlite.png" data-image-name="vlite.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>V Lite Player</strong>
+                    <span>Video + Music • 20.54 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-domino">
+                  <img src="domino.png" data-image-name="domino.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>Domino Score</strong>
+                    <span>Live Sync • 8.30 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-note">
+                  <img src="note.png" data-image-name="note.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>Note Diary</strong>
+                    <span>AES-256 Vault • 25.11 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-privacy">
+                  <img src="privacy.png" data-image-name="privacy.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>Privacy Guard</strong>
+                    <span>Custom Shield • 23.84 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-pubg">
+                  <img src="pubg.png" data-image-name="pubg.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>PUBG Turbo</strong>
+                    <span>DND Launcher • 57.00 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-driver">
+                  <img src="driver.png" data-image-name="driver.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>Driver Diary</strong>
+                    <span>Profit Ledger • 11.35 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0</span>
+                </button>
+                <button type="button" class="phone-app-row jump-app-btn" data-target="app-fee">
+                  <img src="fee.png" data-image-name="fee.png" loading="eager" alt="" class="row-app-icon">
+                  <div class="row-info">
+                    <strong>Fee Diary</strong>
+                    <span>Fee &amp; Receipts • 12.50 MB</span>
+                  </div>
+                  <span class="row-pill">v1.0</span>
+                </button>
+              </div>
+              <div class="phone-bottom-bar">
+                <i class="fa-solid fa-arrows-up-down" aria-hidden="true"></i> Scroll up/down inside • 07 Apps
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="showcase-card showcase-front-right jump-app-btn" data-target="app-driver" aria-label="Jump to Driver Diary">
+            <img src="driver.png" data-image-name="driver.png" loading="eager" alt="" class="showcase-app-icon">
+            <div>
+              <strong>Driver Diary</strong>
+              <span>Profit &amp; diesel ledger</span>
+            </div>
+          </button>
+        </div>
+      </section>
+
+      <!-- Trust Strip -->
+      <section class="trust-strip" aria-label="Platform highlights">
+        <div class="trust-item"><i class="fa-brands fa-github" aria-hidden="true"></i> Hosted on GitHub Releases</div>
+        <div class="trust-item"><i class="fa-solid fa-wifi" aria-hidden="true"></i> Offline-First Architecture</div>
+        <div class="trust-item"><i class="fa-solid fa-qrcode" aria-hidden="true"></i> QR Scan for Mobile</div>
+        <div class="trust-item"><i class="fa-solid fa-globe" aria-hidden="true"></i> English &amp; Hindi Support</div>
+      </section>
+
+      <!-- Apps Collection -->
+      <section class="apps-section" id="apps" aria-labelledby="apps-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">THE COLLECTION</span>
+            <h2 id="apps-title">Explore the apps</h2>
+            <p>Search or filter by category, check exact APK sizes, read features in English or Hindi, and download directly from GitHub.</p>
+          </div>
+          <div class="app-count" aria-live="polite">
+            <span id="visible-count">07</span> applications
+          </div>
+        </div>
+
+        <div class="collection-toolbar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input type="search" id="app-search" placeholder="Search apps or features (e.g. AES-256, Music, Live Sync, Fee)..." aria-label="Search applications">
+            <button type="button" class="search-clear" id="search-clear" hidden aria-label="Clear search">
+              <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="filter-bar" role="tablist" aria-label="Filter applications by category">
+            <button class="filter-pill is-active" type="button" data-filter="all" role="tab" aria-selected="true">All <small>7</small></button>
+            <button class="filter-pill" type="button" data-filter="utility" role="tab" aria-selected="false">Utility <small>2</small></button>
+            <button class="filter-pill" type="button" data-filter="productivity" role="tab" aria-selected="false">Productivity <small>1</small></button>
+            <button class="filter-pill" type="button" data-filter="privacy" role="tab" aria-selected="false">Privacy <small>1</small></button>
+            <button class="filter-pill" type="button" data-filter="multimedia" role="tab" aria-selected="false">Multimedia <small>1</small></button>
+            <button class="filter-pill" type="button" data-filter="education" role="tab" aria-selected="false">Education <small>1</small></button>
+            <button class="filter-pill" type="button" data-filter="gaming" role="tab" aria-selected="false">Gaming <small>1</small></button>
+          </div>
+        </div>
+
+        <div class="app-grid" id="app-grid">
+          <!-- V Lite Player -->
+          <article class="app-card" id="app-vlite" data-category="multimedia">
+            <div class="app-card-head">
+              <img src="vlite.png" data-image-name="vlite.png" loading="lazy" alt="V Lite Player app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>V Lite Player</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">MULTIMEDIA</span>
+                  <span class="app-version">v1.0.0</span>
+                </div>
+                <p class="app-subtitle">Your videos &amp; music, your way.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">20.54 MB</span>
+                  <span class="spec-chip">Video + Music</span>
+                  <span class="spec-chip">Privacy Folder</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="vlite" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="vlite-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>4K Video &amp; History:</b> Play MP4, MKV, AVI and local videos with recent watch history and folder view.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Built-in Music Player:</b> Dedicated Music tab with All Tracks, Folders, Favorites, and clean audio controls.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Background &amp; PiP play:</b> Listen to audio or continue playback while multitasking across apps.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Privacy Folder:</b> PIN-protected private space inside Settings for personal photos and videos.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>100% Offline:</b> Enjoy all local media smoothly without needing an internet connection.</span></li>
+              </ul>
+              <ul class="feature-list" id="vlite-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>4K वीडियो और हिस्ट्री:</b> MP4, MKV, AVI व लोकल वीडियो को वॉच हिस्ट्री और फोल्डर व्यू के साथ चलाएं।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>इन-बिल्ट म्यूज़िक प्लेयर:</b> अलग म्यूज़िक टैब जिसमें All, Folder, Favorite और क्लीन ऑडियो कंट्रोल्स हैं।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>बैकग्राउंड और PiP प्ले:</b> दूसरे ऐप इस्तेमाल करते हुए वीडियो का ऑडियो सुनें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>प्राइवेसी फोल्डर:</b> सेटिंग्स के अंदर निजी फोटो और वीडियो के लिए PIN-प्रोटेक्टेड जगह।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>100% ऑफलाइन:</b> बिना इंटरनेट कनेक्शन अपने फोन की पूरी मीडिया चलाएं।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/V-Lite-Player/releases/download/v1.0.0/V.Lite_1.0.0.apk" data-app-name="V Lite Player">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="V Lite Player" data-version="v1.0.0" data-size="20.54 MB" data-icon="vlite.png" data-url="https://github.com/neyazuddin-apps/V-Lite-Player/releases/download/v1.0.0/V.Lite_1.0.0.apk" title="Scan QR on Phone" aria-label="Show QR code for V Lite Player">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/V-Lite-Player/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View V Lite Player on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="V Lite Player" data-url="https://github.com/neyazuddin-apps/V-Lite-Player/releases/download/v1.0.0/V.Lite_1.0.0.apk" title="Copy or Share APK link" aria-label="Share V Lite Player link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 20.54 MB APK</span>
+            </div>
+          </article>
+
+          <!-- Domino Score -->
+          <article class="app-card" id="app-domino" data-category="utility">
+            <div class="app-card-head">
+              <img src="domino.png" data-image-name="domino.png" loading="lazy" alt="Domino Score app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>Domino Score</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">UTILITY</span>
+                  <span class="app-version">v1.0.0</span>
+                </div>
+                <p class="app-subtitle">Keep every round in check.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">8.30 MB</span>
+                  <span class="spec-chip">Live Match Sync</span>
+                  <span class="spec-chip">Voice Totals</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="domino" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="domino-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>2 to 4 players scoreboard:</b> Track round-by-round scores, penalties, and automatic totals up to your target (50–200).</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Live Match Sync:</b> Host or join a live scoreboard across phones using a custom Match ID.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Voice Announcement:</b> Tap "Speak Totals" to hear current team scores announced aloud.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>History &amp; Dark Mode:</b> Review past Game History &amp; Leaderboard and switch seamlessly to Dark Mode.</span></li>
+              </ul>
+              <ul class="feature-list" id="domino-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>2 से 4 खिलाड़ियों का स्कोरबोर्ड:</b> हर राउंड का स्कोर, पेनल्टी और टारगेट स्कोर (50–200) के साथ अपने आप जोड़।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>लाइव मैच सिंक:</b> कस्टम Match ID के ज़रिए दूसरे फोन पर Host या Join करके लाइव स्कोर देखें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>वॉयस अनाउंसमेंट:</b> "Speak Totals" दबाकर सभी टीमों का कुल स्कोर आवाज़ में सुनें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>हिस्ट्री और डार्क मोड:</b> पुराने गेम की हिस्ट्री, लीडरबोर्ड देखें और डार्क मोड इस्तेमाल करें।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/Domino-Score-/releases/download/v1.0.0/Domino.Score_1.0.apk" data-app-name="Domino Score">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="Domino Score" data-version="v1.0.0" data-size="8.30 MB" data-icon="domino.png" data-url="https://github.com/neyazuddin-apps/Domino-Score-/releases/download/v1.0.0/Domino.Score_1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for Domino Score">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/Domino-Score-/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View Domino Score on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="Domino Score" data-url="https://github.com/neyazuddin-apps/Domino-Score-/releases/download/v1.0.0/Domino.Score_1.0.apk" title="Copy or Share APK link" aria-label="Share Domino Score link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 8.30 MB APK</span>
+            </div>
+          </article>
+
+          <!-- Note Diary -->
+          <article class="app-card" id="app-note" data-category="productivity">
+            <div class="app-card-head">
+              <img src="note.png" data-image-name="note.png" loading="lazy" alt="Note Diary app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>Note Diary</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">PRODUCTIVITY</span>
+                  <span class="app-version">v1.0.0</span>
+                </div>
+                <p class="app-subtitle">Stealth notebook with an AES-256 vault.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">25.11 MB</span>
+                  <span class="spec-chip">AES-256 Encrypted</span>
+                  <span class="spec-chip">100% Offline</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="note" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="note-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Dual PIN &amp; Stealth Mode:</b> Looks like a simple Daily Notebook; Fake PIN opens a Notepad while Real PIN unlocks the Vault.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>AES-256 Encryption:</b> Strong encryption protects hidden photos, videos, and files stored inside your device.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Secure Gallery &amp; ExoPlayer:</b> Swipeable photo viewer, albums, and built-in ExoPlayer for encrypted videos.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Intruder Defense &amp; Trash Bin:</b> Fingerprint unlock, Auto-lock on exit, Security Question recovery, and 30-day Recycle Bin.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Encrypted ZIP Backup:</b> 100% offline with zero cloud storage—export an encrypted ZIP backup to restore anytime.</span></li>
+              </ul>
+              <ul class="feature-list" id="note-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>डुअल PIN और स्टील्थ मोड:</b> बाहर से साधारण नोटबुक दिखता है; नकली PIN से नोटपैड और असली PIN से प्राइवेट वॉल्ट खुलता है।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>AES-256 एन्क्रिप्शन:</b> आपकी छिपी हुई फोटो, वीडियो और फाइलों के लिए मजबूत एन्क्रिप्टेड सुरक्षा।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>सिक्योर गैलरी और ExoPlayer:</b> स्वाइप करने वाला फोटो व्यूअर, एल्बम और वीडियो के लिए बिल्ट-इन ExoPlayer।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>फिंगरप्रिंट और रीसायकल बिन:</b> फिंगरप्रिंट अनलॉक, बाहर निकलते ही ऑटो-लॉक, सिक्योरिटी सवाल और 30-दिन का ट्रैश बिन।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>एन्क्रिप्टेड ZIP बैकअप:</b> 100% ऑफलाइन (कोई क्लाउड अपलोड नहीं)—सेटिंग्स से सुरक्षित ZIP बैकअप बनाएं और रीस्टोर करें।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/Note-Diary/releases/download/v1.0.0/Note.Diary_1.0.apk" data-app-name="Note Diary">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="Note Diary" data-version="v1.0.0" data-size="25.11 MB" data-icon="note.png" data-url="https://github.com/neyazuddin-apps/Note-Diary/releases/download/v1.0.0/Note.Diary_1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for Note Diary">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/Note-Diary/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View Note Diary on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="Note Diary" data-url="https://github.com/neyazuddin-apps/Note-Diary/releases/download/v1.0.0/Note.Diary_1.0.apk" title="Copy or Share APK link" aria-label="Share Note Diary link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 25.11 MB APK</span>
+            </div>
+          </article>
+
+          <!-- Privacy Guard -->
+          <article class="app-card" id="app-privacy" data-category="privacy">
+            <div class="app-card-head">
+              <img src="privacy.png" data-image-name="privacy.png" loading="lazy" alt="Privacy Guard app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>Privacy Guard</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">PRIVACY</span>
+                  <span class="app-version">v1.0.0</span>
+                </div>
+                <p class="app-subtitle">Smart privacy curtain in public.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">23.84 MB</span>
+                  <span class="spec-chip">No Internet Needed</span>
+                  <span class="spec-chip">Custom Photo</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="privacy" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="privacy-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Custom Screen Curtain:</b> Hide chats or content using custom colors, an opacity slider, or a photo from your gallery.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Shake, Triple &amp; Double-Tap:</b> Shake to turn on the shield, triple-tap to close, and double-tap to resize cleanly.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Landscape Auto-Hide:</b> Automatically pauses during landscape gaming (like BGMI/PUBG) to prevent interference.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Persistent Settings:</b> Remembers your last curtain height, opacity, and scaled custom image after restarts.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>100% Offline Privacy:</b> Requires zero internet permission so your screen data never leaves your phone.</span></li>
+              </ul>
+              <ul class="feature-list" id="privacy-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>कस्टम स्क्रीन पर्दा:</b> चैट या स्क्रीन छुपाने के लिए पर्दे का रंग, पारदर्शिता (Opacity) या गैलरी से अपनी फोटो लगाएं।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>स्मार्ट जेस्चर:</b> फोन हिलाते ही पर्दा चालू, तीन टैप से बंद और दो टैप से पर्दे का आकार बदलें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>लैंडस्केप ऑटो-हाइड:</b> गेमिंग (जैसे PUBG/BGMI) के दौरान लैंडस्केप मोड में अपने आप रुक जाता है।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>सेव रहने वाली सेटिंग्स:</b> फोन रीस्टार्ट होने पर भी आपकी ऊंचाई, Opacity और चुनी हुई फोटो याद रखता है।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>100% ऑफलाइन सुरक्षा:</b> बिना इंटरनेट अनुमति के काम करता है—आपका डेटा कभी फोन से बाहर नहीं जाता।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/Privacy-Guard/releases/download/v1.0.0/Privacy.Guard_1.0.apk" data-app-name="Privacy Guard">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="Privacy Guard" data-version="v1.0.0" data-size="23.84 MB" data-icon="privacy.png" data-url="https://github.com/neyazuddin-apps/Privacy-Guard/releases/download/v1.0.0/Privacy.Guard_1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for Privacy Guard">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/Privacy-Guard/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View Privacy Guard on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="Privacy Guard" data-url="https://github.com/neyazuddin-apps/Privacy-Guard/releases/download/v1.0.0/Privacy.Guard_1.0.apk" title="Copy or Share APK link" aria-label="Share Privacy Guard link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 23.84 MB APK</span>
+            </div>
+          </article>
+
+          <!-- PUBG Turbo -->
+          <article class="app-card" id="app-pubg" data-category="gaming">
+            <div class="app-card-head">
+              <img src="pubg.png" data-image-name="pubg.png" loading="lazy" alt="PUBG Turbo app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>PUBG Turbo</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">GAMING</span>
+                  <span class="app-version">v1.0.0</span>
+                </div>
+                <p class="app-subtitle">Gaming status &amp; DND launcher.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">57.00 MB</span>
+                  <span class="spec-chip">No File Edits</span>
+                  <span class="spec-chip">DND &amp; Telemetry</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="pubg" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="pubg-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Live System Monitor:</b> View battery level, CPU temperature, refresh rate, resolution, storage load, and live ping.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Gaming DND &amp; Ghost Mode:</b> Mute notifications or auto-reject incoming calls for distraction-free matches.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Game Launcher &amp; Lobby Music:</b> Select your target game and play built-in lobby audio inside the app.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Offline &amp; No File Edits:</b> Works offline and does not touch or modify internal game files.</span></li>
+              </ul>
+              <ul class="feature-list" id="pubg-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>लाइव सिस्टम मॉनिटर:</b> बैटरी प्रतिशत, CPU तापमान, रिफ्रेश रेट, स्टोरेज लोड और लाइव पिंग देखें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>गेमिंग DND और घोस्ट मोड:</b> गेम के दौरान नोटिफिकेशन म्यूट करें या इनकमिंग कॉल ऑटो-रिजेक्ट करें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>गेम लॉन्चर और लॉबी म्यूज़िक:</b> अपना टारगेट गेम चुनें और ऐप के अंदर लॉबी म्यूज़िक चलाएं।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>ऑफलाइन और गेम फाइल सुरक्षित:</b> ऑफलाइन चलता है और किसी भी गेम फाइल में कोई बदलाव नहीं करता।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/PUBG-Turbo/releases/download/v1.0.0/PUBG.TURBO_1.0.apk" data-app-name="PUBG Turbo">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="PUBG Turbo" data-version="v1.0.0" data-size="57.00 MB" data-icon="pubg.png" data-url="https://github.com/neyazuddin-apps/PUBG-Turbo/releases/download/v1.0.0/PUBG.TURBO_1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for PUBG Turbo">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/PUBG-Turbo/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View PUBG Turbo on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="PUBG Turbo" data-url="https://github.com/neyazuddin-apps/PUBG-Turbo/releases/download/v1.0.0/PUBG.TURBO_1.0.apk" title="Copy or Share APK link" aria-label="Share PUBG Turbo link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 57.00 MB APK</span>
+            </div>
+          </article>
+
+          <!-- Driver Diary -->
+          <article class="app-card" id="app-driver" data-category="utility">
+            <div class="app-card-head">
+              <img src="driver.png" data-image-name="driver.png" loading="lazy" alt="Driver Diary app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>Driver Diary</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">UTILITY</span>
+                  <span class="app-version">v1.0</span>
+                </div>
+                <p class="app-subtitle">Keep trip, diesel &amp; profit records together.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">11.35 MB</span>
+                  <span class="spec-chip">Offline + Sync</span>
+                  <span class="spec-chip">Profit Ledger</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="driver" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="driver-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Live Trip Summary:</b> Instant overview of Total Earned, Diesel Spent, Net Profit, and total trip count.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Route &amp; Search Log:</b> Record trip dates, locations, freight amounts, and search records instantly by location.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Diesel Units Tracker:</b> Track diesel expenses alongside remaining fuel units per trip.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Driver Profile &amp; Cloud Sync:</b> Save mobile/vehicle number, share summaries, and sync with Firebase where configured.</span></li>
+              </ul>
+              <ul class="feature-list" id="driver-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>कुल कमाई और मुनाफा:</b> एक नज़र में Total Earned, Diesel Spent, Net Profit और कुल ट्रिप्स देखें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>रूट और लोकेशन सर्च:</b> तारीख, जगह और भाड़े की रकम दर्ज करें और लोकेशन से तुरंत सर्च करें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>डीज़ल यूनिट हिसाब:</b> डीज़ल के खर्च के साथ बचा हुआ डीज़ल (Remaining Diesel) भी ट्रैक करें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>प्रोफाइल और क्लाउड सिंक:</b> मोबाइल व गाड़ी नंबर सेव करें, हिसाब शेयर करें और Firebase सिंक का उपयोग करें।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/Driver-Diary/releases/download/v1.0/Driver-Diary-v1.0.apk" data-app-name="Driver Diary">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="Driver Diary" data-version="v1.0" data-size="11.35 MB" data-icon="driver.png" data-url="https://github.com/neyazuddin-apps/Driver-Diary/releases/download/v1.0/Driver-Diary-v1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for Driver Diary">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/Driver-Diary/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View Driver Diary on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="Driver Diary" data-url="https://github.com/neyazuddin-apps/Driver-Diary/releases/download/v1.0/Driver-Diary-v1.0.apk" title="Copy or Share APK link" aria-label="Share Driver Diary link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 11.35 MB APK</span>
+            </div>
+          </article>
+
+          <!-- Fee Diary -->
+          <article class="app-card" id="app-fee" data-category="education">
+            <div class="app-card-head">
+              <img src="fee.png" data-image-name="fee.png" loading="lazy" alt="Fee Diary app icon" class="app-icon">
+              <div class="app-heading">
+                <h3>Fee Diary</h3>
+                <div class="app-meta-row">
+                  <span class="app-category">EDUCATION</span>
+                  <span class="app-version">v1.0</span>
+                </div>
+                <p class="app-subtitle">A simpler way to track student fees.</p>
+                <div class="app-specs">
+                  <span class="spec-chip spec-size">12.50 MB</span>
+                  <span class="spec-chip">Offline + Sync</span>
+                  <span class="spec-chip">ID &amp; Receipts</span>
+                </div>
+              </div>
+            </div>
+            <div class="feature-panel">
+              <div class="feature-heading">
+                <span><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i> Key features</span>
+                <button class="language-toggle" type="button" data-app="fee" aria-pressed="false">हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i></button>
+              </div>
+              <ul class="feature-list" id="fee-en">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Student Registry:</b> Add Roll No, Student Name, Father's Name, Monthly Fee, and Parent WhatsApp/Phone number.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Monthly Dashboard &amp; Filters:</b> View Collected vs Total Due by month/year and filter by All, Paid, or Due Only.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Cash / UPI &amp; Partial Payments:</b> Mark payment modes (Cash / Online UPI), dates, and remaining instalment balances.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>ID Cards &amp; Receipts:</b> Generate student ID cards, share fee receipts, and search by student, father's name, or roll number.</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>App Security PIN &amp; Cloud Sync:</b> Protect school records with an App Security PIN and optional Firebase cloud backup.</span></li>
+              </ul>
+              <ul class="feature-list" id="fee-hi" lang="hi" hidden>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>छात्र रजिस्टर:</b> रोल नंबर, छात्र का नाम, पिता का नाम, मासिक फीस और अभिभावक का WhatsApp/फोन नंबर रखें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>महीनेवार डैशबोर्ड और फिल्टर:</b> Collected और Total Due देखें तथा All, Paid या Due Only से तुरंत फिल्टर करें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>Cash / UPI और किस्त रिकॉर्ड:</b> भुगतान का तरीका (Cash / Online UPI), तारीख और बाकी बैलेंस ट्रैक करें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>ID कार्ड और फीस रसीद:</b> छात्र ID कार्ड बनाएं, रसीद शेयर करें और नाम, पिता के नाम या रोल नंबर से खोजें।</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span><b>सिक्योरिटी PIN और क्लाउड सिंक:</b> स्कूल/कोचिंग रिकॉर्ड को App Security PIN और वैकल्पिक Firebase बैकअप से सुरक्षित रखें।</span></li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div class="card-actions-row">
+                <a class="download-button" href="https://github.com/neyazuddin-apps/Fee-Diary/releases/download/v1.0/Fee-Diary-v1.0.apk" data-app-name="Fee Diary">
+                  <i class="fa-solid fa-download" aria-hidden="true"></i>
+                  <span>Download APK</span>
+                  <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn qr-app-btn" data-name="Fee Diary" data-version="v1.0" data-size="12.50 MB" data-icon="fee.png" data-url="https://github.com/neyazuddin-apps/Fee-Diary/releases/download/v1.0/Fee-Diary-v1.0.apk" title="Scan QR on Phone" aria-label="Show QR code for Fee Diary">
+                  <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                </button>
+                <a class="icon-action-btn" href="https://github.com/neyazuddin-apps/Fee-Diary/releases" target="_blank" rel="noopener noreferrer" title="View GitHub Releases" aria-label="View Fee Diary on GitHub Releases">
+                  <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <button type="button" class="icon-action-btn share-app-btn" data-name="Fee Diary" data-url="https://github.com/neyazuddin-apps/Fee-Diary/releases/download/v1.0/Fee-Diary-v1.0.apk" title="Copy or Share APK link" aria-label="Share Fee Diary link">
+                  <i class="fa-solid fa-share-nodes" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="release-source"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Official GitHub Release • 12.50 MB APK</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <h3>No matching applications found</h3>
+          <p>Try a different keyword or reset the category filter.</p>
+          <button type="button" class="secondary-button" id="reset-filters-btn">Show all apps</button>
+        </div>
+      </section>
+
+      <!-- Safe Install Steps -->
+      <section class="install-section" id="install-steps" aria-labelledby="install-heading">
+        <div class="install-header">
+          <span class="section-kicker">SAFE &amp; DIRECT DISTRIBUTION</span>
+          <h2 id="install-heading">Install cleanly in 3 steps</h2>
+        </div>
+        <div class="install-bento bilingual-block" data-lang="en">
+          <div class="install-step-card">
+            <span class="step-badge">01</span>
+            <h3>Download from GitHub</h3>
+            <p>Tap <strong>Download APK</strong> on any app. All packages come directly from official GitHub releases.</p>
+          </div>
+          <div class="install-step-card">
+            <span class="step-badge">02</span>
+            <h3>Allow Browser Install</h3>
+            <p>Open the downloaded <code>.apk</code> file and enable <em>Allow from this source</em> when Android prompts.</p>
+          </div>
+          <div class="install-step-card">
+            <span class="step-badge">03</span>
+            <h3>Ready for Daily Use</h3>
+            <p>Tap <strong>Install</strong> and launch immediately. Most tools work completely offline right out of the box.</p>
+          </div>
+        </div>
+        <div class="install-bento bilingual-block" data-lang="hi" lang="hi" hidden>
+          <div class="install-step-card">
+            <span class="step-badge">01</span>
+            <h3>GitHub से डाउनलोड करें</h3>
+            <p>किसी भी ऐप पर <strong>Download APK</strong> दबाएं। सभी फाइलें सीधे आधिकारिक GitHub रिलीज से आती हैं।</p>
+          </div>
+          <div class="install-step-card">
+            <span class="step-badge">02</span>
+            <h3>ब्राउज़र इंस्टॉल की अनुमति दें</h3>
+            <p>डाउनलोड की गई <code>.apk</code> फाइल खोलें और Android के पूछने पर <em>Allow from this source</em> चालू करें।</p>
+          </div>
+          <div class="install-step-card">
+            <span class="step-badge">03</span>
+            <h3>इंस्टॉल करें और इस्तेमाल करें</h3>
+            <p><strong>Install</strong> पर टैप करें। अधिकतर ऐप्स बिना इंटरनेट के ऑफलाइन काम करने के लिए तैयार हैं।</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Safety & Support FAQ -->
+      <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+        <div class="install-header">
+          <span class="section-kicker">QUESTIONS &amp; TRUST</span>
+          <h2 id="faq-heading">Frequently asked questions</h2>
+        </div>
+
+        <div class="faq-list bilingual-block" data-lang="en">
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>Why does Android or Play Protect show a warning when installing an APK?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Android automatically shows a prompt whenever an app is installed outside Google Play Store. All APKs listed here are hosted transparently on official GitHub Releases—you can inspect every release page via the GitHub icon on each card.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>How are my Note Diary vault files and offline records backed up?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p><strong>Note Diary</strong> is 100% offline with zero cloud storage—use its built-in <em>Create Backup</em> setting to export an encrypted ZIP file to Google Drive or your PC before uninstalling or changing phones. <strong>Driver Diary</strong> and <strong>Fee Diary</strong> support optional Firebase cloud backup where configured.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>Do Privacy Guard, V Lite Player, or Domino Score need internet?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Privacy Guard runs 100% offline with no internet permission. V Lite Player plays all local videos and music offline. Domino Score works offline too, and only uses internet if you choose to Host or Join a Live Match Sync room.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>How do I report a bug or suggest a new feature?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>You can send feedback using our <button type="button" class="inline-link-btn open-feedback-trigger">Feedback &amp; Bug Report form</button> or reach out via Instagram and email listed in the footer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-list bilingual-block" data-lang="hi" lang="hi" hidden>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>APK इंस्टॉल करते समय Android या Play Protect चेतावनी क्यों दिखाता है?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Google Play Store के बाहर से कोई भी ऐप इंस्टॉल करने पर Android अपने आप यह चेतावनी दिखाता है। यहाँ मौजूद सभी APKs सीधे आधिकारिक GitHub Releases पर होस्ट हैं—आप हर कार्ड के GitHub बटन से रिलीज पेज देख सकते हैं।</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>Note Diary वॉल्ट और ऑफलाइन रिकॉर्ड का बैकअप कैसे सुरक्षित रखें?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p><strong>Note Diary</strong> 100% ऑफलाइन है और कोई डेटा क्लाउड पर नहीं भेजता—इसलिए फोन बदलने या ऐप हटाने से पहले Settings में जाकर <em>Create Backup</em> से एन्क्रिप्टेड ZIP फाइल Google Drive या कंप्यूटर में सेव ज़रूर करें। <strong>Driver Diary</strong> और <strong>Fee Diary</strong> में वैकल्पिक Firebase बैकअप उपलब्ध है।</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>क्या Privacy Guard, V Lite Player और Domino Score को इंटरनेट चाहिए?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>Privacy Guard बिना किसी इंटरनेट अनुमति के 100% ऑफलाइन चलता है। V Lite Player भी ऑफलाइन वीडियो और म्यूज़िक चलाता है। Domino Score ऑफलाइन काम करता है और इंटरनेट केवल तभी इस्तेमाल होता है जब आप Live Match Sync (Host/Join) चालू करें।</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              <span>अगर किसी ऐप में बग दिखे या नया फीचर चाहिए तो कैसे बताएं?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-a" hidden>
+              <p>आप हमारे <button type="button" class="inline-link-btn open-feedback-trigger">Feedback &amp; Bug Report फॉर्म</button> के ज़रिए या नीचे दिए Instagram और ईमेल से सीधे संपर्क कर सकते हैं।</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" id="about">
+        <div class="about-mark"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
+        <div class="about-copy">
+          <span class="section-kicker">ABOUT THIS COLLECTION</span>
+          <h2>Built around everyday needs.</h2>
+          <p>Neyazuddin Apps is an independent Android app collection focused on practical tools for daily life—from AES-256 encrypted vaults and smart screen privacy to transport diesel ledgers and coaching fee management, documented clearly in both English and Hindi.</p>
+        </div>
+        <div class="about-stat">
+          <strong>07</strong>
+          <span>Android apps</span>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-brand-name">NEYAZUDDIN <strong>APPS</strong></span>
+          <p>Simple, practical tools for everyday digital life.</p>
+          <div class="store-notice">
+            <i class="fa-brands fa-google-play" aria-hidden="true"></i>
+            <span>Google Play Store</span>
+            <b>Coming soon</b>
+          </div>
+        </div>
+        <div class="footer-column">
+          <span class="footer-label">INFORMATION</span>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <button type="button" class="footer-text-btn" id="footer-install-btn">APK Installation Guide</button>
+          <button type="button" class="footer-text-btn open-feedback-trigger">Report Bug / Feedback</button>
+        </div>
+        <div class="footer-column">
+          <span class="footer-label">CONNECT</span>
+          <a href="https://instagram.com/neyazuddin__adil" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Instagram</a>
+          <a href="https://www.facebook.com/profile.php?id=100048943242608" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" aria-hidden="true"></i> Facebook</a>
+          <a href="mailto:neyazuddin8882@gmail.com?subject=App%20Feedback%20%26%20Suggestion&amp;body=Hi%20Neyazuddin%2C%0A%0AI%20would%20like%20to%20share%20this%20feedback:%0A%0A"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Send feedback</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year">2026</span> Neyazuddin Apps. All rights reserved.</span>
+        <a href="#top">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+      </div>
     </footer>
+  </div>
 
-    <!-- INTERACTIVE HINDI/ENGLISH TOGGLE JAVASCRIPT -->
-    <script>
-        function toggleLang(appId) {
-            const enList = document.getElementById(appId + '-en');
-            const hiList = document.getElementById(appId + '-hi');
-            const btn = document.getElementById(appId + '-btn');
+  <!-- APK Install Modal -->
+  <div class="modal-backdrop" id="install-modal" hidden aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head">
+        <div>
+          <span class="section-kicker">SAFE INSTALLATION</span>
+          <h3 id="modal-title">How to install APK files</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="install-modal" aria-label="Close installation guide">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <ol class="install-steps">
+        <li>
+          <span class="step-num">01</span>
+          <div>
+            <strong>Download from GitHub Releases</strong>
+            <p>Tap "Download APK" on any app card. Every file is served directly from official GitHub releases.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">02</span>
+          <div>
+            <strong>Allow browser installation</strong>
+            <p>Open the downloaded <code>.apk</code> file. If Android asks, tap <em>Settings</em> and enable <em>Allow from this source</em> for your browser.</p>
+          </div>
+        </li>
+        <li>
+          <span class="step-num">03</span>
+          <div>
+            <strong>Install &amp; use offline</strong>
+            <p>Tap <em>Install</em> and you're ready. You can turn off unknown sources again afterward if you prefer.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
 
-            if (hiList.style.display === 'none') {
-                hiList.style.display = 'block';
-                enList.style.display = 'none';
-                btn.innerHTML = '🇬🇧 View English';
-            } else {
-                hiList.style.display = 'none';
-                enList.style.display = 'block';
-                btn.innerHTML = '🇮🇳 हिंदी में पढ़ें';
-            }
+  <!-- QR Modal -->
+  <div class="modal-backdrop" id="qr-modal" hidden aria-hidden="true">
+    <div class="modal-card modal-card--sm" role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+      <div class="modal-head">
+        <div class="qr-title-wrap">
+          <img src="" id="qr-app-icon" alt="" class="qr-head-icon">
+          <div>
+            <h3 id="qr-modal-title">Scan on Android</h3>
+            <span class="section-kicker" id="qr-app-version">v1.0.0</span>
+          </div>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="qr-modal" aria-label="Close QR modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="qr-box">
+        <img src="" id="qr-code-img" alt="QR code to download APK" class="qr-image">
+        <p class="qr-fallback" id="qr-fallback" hidden>QR preview requires an internet connection. Tap Download APK below.</p>
+        <p class="qr-caption">Point your phone camera at this QR code to download the APK directly.</p>
+      </div>
+      <a href="#" id="qr-direct-link" class="download-button">
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+        <span>Download APK directly</span>
+        <i class="fa-solid fa-arrow-right button-arrow" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Feedback Modal -->
+  <div class="modal-backdrop" id="feedback-modal" hidden aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title">
+      <div class="modal-head">
+        <div>
+          <span class="section-kicker">FEEDBACK &amp; SUPPORT</span>
+          <h3 id="feedback-modal-title">Report a bug or suggest a feature</h3>
+        </div>
+        <button type="button" class="modal-close" data-close-modal="feedback-modal" aria-label="Close feedback form">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <form class="feedback-form" id="feedback-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fb-app">Application</label>
+            <select id="fb-app" required>
+              <option value="General / Website">General / Website</option>
+              <option value="V Lite Player">V Lite Player</option>
+              <option value="Domino Score">Domino Score</option>
+              <option value="Note Diary">Note Diary</option>
+              <option value="Privacy Guard">Privacy Guard</option>
+              <option value="PUBG Turbo">PUBG Turbo</option>
+              <option value="Driver Diary">Driver Diary</option>
+              <option value="Fee Diary">Fee Diary</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="fb-type">Topic</label>
+            <select id="fb-type" required>
+              <option value="Feature Request">Feature Request</option>
+              <option value="Bug Report">Bug Report</option>
+              <option value="General Feedback">General Feedback</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="fb-name">Your Name (optional)</label>
+          <input type="text" id="fb-name" placeholder="e.g. Adil">
+        </div>
+        <div class="form-field">
+          <label for="fb-message">Message</label>
+          <textarea id="fb-message" rows="3" required placeholder="Describe the bug, device model, or feature idea..."></textarea>
+        </div>
+        <button type="submit" class="primary-button form-submit-btn">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          <span>Send via Email App</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden>
+    <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+    <span id="toast-msg">Done</span>
+  </div>
+
+  <script>
+    // 1. Lag-free Scroll Progress Bar (rAF throttled)
+    (() => {
+      const bar = document.getElementById("scroll-progress");
+      let ticking = false;
+      window.addEventListener("scroll", () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          const doc = document.documentElement;
+          const max = doc.scrollHeight - doc.clientHeight;
+          bar.style.width = max > 0 ? `${(doc.scrollTop / max) * 100}%` : "0%";
+          ticking = false;
+        });
+      }, { passive: true });
+    })();
+
+    // 2. Original image resolver
+    (() => {
+      const folders = ["images/", "assets/", "img/", "icons/", "app-icons/", "App Icons/"];
+      document.querySelectorAll("img[data-image-name]").forEach((img) => {
+        const filename = img.dataset.imageName;
+        let attempt = 0;
+        const tryNextFolder = () => {
+          if (attempt < folders.length) img.src = folders[attempt++] + filename;
+        };
+        img.addEventListener("error", tryNextFolder);
+        if (img.complete && img.naturalWidth === 0) tryNextFolder();
+      });
+    })();
+
+    // 3. Toast helper
+    const showToast = (() => {
+      const toast = document.getElementById("toast");
+      const msgEl = document.getElementById("toast-msg");
+      let timer;
+      return (text) => {
+        clearTimeout(timer);
+        msgEl.textContent = text;
+        toast.hidden = false;
+        requestAnimationFrame(() => toast.classList.add("is-visible"));
+        timer = setTimeout(() => {
+          toast.classList.remove("is-visible");
+          setTimeout(() => { toast.hidden = true; }, 220);
+        }, 2600);
+      };
+    })();
+
+    // 4. Global & Individual Bilingual Toggle
+    (() => {
+      const cardButtons = document.querySelectorAll(".language-toggle");
+      const globalBtn = document.getElementById("global-lang-toggle");
+      const bilingualBlocks = document.querySelectorAll(".bilingual-block");
+      let globalHindi = false;
+
+      function setCardLanguage(button, toHindi) {
+        const app = button.dataset.app;
+        const enList = document.getElementById(`${app}-en`);
+        const hiList = document.getElementById(`${app}-hi`);
+        if (!enList || !hiList) return;
+        enList.hidden = toHindi;
+        hiList.hidden = !toHindi;
+        button.setAttribute("aria-pressed", String(toHindi));
+        button.innerHTML = toHindi
+          ? 'View English <i class="fa-solid fa-globe" aria-hidden="true"></i>'
+          : 'हिंदी में पढ़ें <i class="fa-solid fa-globe" aria-hidden="true"></i>';
+      }
+
+      cardButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const hiList = document.getElementById(`${button.dataset.app}-hi`);
+          setCardLanguage(button, hiList.hidden);
+        });
+      });
+
+      globalBtn.addEventListener("click", () => {
+        globalHindi = !globalHindi;
+        cardButtons.forEach((btn) => setCardLanguage(btn, globalHindi));
+        bilingualBlocks.forEach((block) => {
+          const isHi = block.dataset.lang === "hi";
+          block.hidden = globalHindi ? !isHi : isHi;
+        });
+        globalBtn.setAttribute("aria-pressed", String(globalHindi));
+        globalBtn.querySelector("span").textContent = globalHindi ? "English" : "हिंदी";
+        showToast(globalHindi ? "पूरा पेज हिंदी में बदल दिया गया है" : "Switched content to English");
+      });
+    })();
+
+    // 5. Category Filter + Instant Search
+    (() => {
+      const filterPills = document.querySelectorAll(".filter-pill");
+      const searchInput = document.getElementById("app-search");
+      const searchClear = document.getElementById("search-clear");
+      const cards = Array.from(document.querySelectorAll(".app-card"));
+      const countEl = document.getElementById("visible-count");
+      const emptyState = document.getElementById("empty-state");
+      const resetBtn = document.getElementById("reset-filters-btn");
+      let activeCategory = "all";
+
+      function applyFilters() {
+        const query = searchInput.value.trim().toLowerCase();
+        searchClear.hidden = query.length === 0;
+
+        const visibleCards = [];
+        cards.forEach((card) => {
+          card.classList.remove("is-wide");
+          const catMatch = activeCategory === "all" || card.dataset.category === activeCategory;
+          const textMatch = !query || card.textContent.toLowerCase().includes(query);
+          const show = catMatch && textMatch;
+          card.hidden = !show;
+          if (show) {
+            card.classList.add("is-revealed");
+            visibleCards.push(card);
+          }
+        });
+
+        if (visibleCards.length > 1 && visibleCards.length % 2 !== 0) {
+          visibleCards[visibleCards.length - 1].classList.add("is-wide");
         }
-    </script>
 
+        countEl.textContent = String(visibleCards.length).padStart(2, "0");
+        emptyState.hidden = visibleCards.length > 0;
+      }
+
+      filterPills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          activeCategory = pill.dataset.filter;
+          filterPills.forEach((p) => {
+            p.classList.remove("is-active");
+            p.setAttribute("aria-selected", "false");
+          });
+          pill.classList.add("is-active");
+          pill.setAttribute("aria-selected", "true");
+          applyFilters();
+        });
+      });
+
+      searchInput.addEventListener("input", applyFilters);
+      searchClear.addEventListener("click", () => {
+        searchInput.value = "";
+        applyFilters();
+        searchInput.focus();
+      });
+
+      resetBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        activeCategory = "all";
+        filterPills.forEach((p) => {
+          const isAll = p.dataset.filter === "all";
+          p.classList.toggle("is-active", isAll);
+          p.setAttribute("aria-selected", String(isAll));
+        });
+        applyFilters();
+      });
+
+      window.resetToAllApps = () => resetBtn.click();
+      applyFilters();
+    })();
+
+    // 6. Interactive Hero Jump & Direct #app-... URL Highlighting
+    (() => {
+      function focusAppCard(targetId) {
+        const card = document.getElementById(targetId);
+        if (!card || !card.classList.contains("app-card")) return;
+        if (card.hidden && window.resetToAllApps) window.resetToAllApps();
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.remove("is-highlighted");
+        void card.offsetWidth;
+        card.classList.add("is-highlighted");
+        setTimeout(() => card.classList.remove("is-highlighted"), 1800);
+      }
+
+      document.querySelectorAll(".jump-app-btn").forEach((btn) => {
+        btn.addEventListener("click", () => focusAppCard(btn.dataset.target));
+      });
+
+      if (window.location.hash && window.location.hash.startsWith("#app-")) {
+        setTimeout(() => focusAppCard(window.location.hash.slice(1)), 220);
+      }
+    })();
+
+    // 7. Download Toast & Share / Copy Link
+    (() => {
+      document.querySelectorAll(".download-button[data-app-name]").forEach((link) => {
+        link.addEventListener("click", () => {
+          showToast(`Starting ${link.dataset.appName} APK download...`);
+        });
+      });
+
+      document.querySelectorAll(".share-app-btn").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const name = btn.dataset.name;
+          const url = btn.dataset.url;
+          if (navigator.share) {
+            try {
+              await navigator.share({ title: `${name} — Neyazuddin Apps`, text: `Download ${name} Android APK:`, url });
+              return;
+            } catch (_) {}
+          }
+          try {
+            await navigator.clipboard.writeText(url);
+            showToast(`${name} APK link copied!`);
+          } catch {
+            showToast("Copy failed — tap Download APK directly");
+          }
+        });
+      });
+    })();
+
+    // 8. FAQ Accordion
+    (() => {
+      document.querySelectorAll(".faq-q").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const expanded = btn.getAttribute("aria-expanded") === "true";
+          btn.setAttribute("aria-expanded", String(!expanded));
+          btn.nextElementSibling.hidden = expanded;
+        });
+      });
+    })();
+
+    // 9. Modals (Install, QR, Gmail Feedback)
+    (() => {
+      function openModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.hidden = false;
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeModal(id) {
+        const modal = document.getElementById(id);
+        if (!modal) return;
+        modal.hidden = true;
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll("[data-close-modal]").forEach((btn) => {
+        btn.addEventListener("click", () => closeModal(btn.dataset.closeModal));
+      });
+
+      document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
+        backdrop.addEventListener("click", (e) => {
+          if (e.target === backdrop) closeModal(backdrop.id);
+        });
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.querySelectorAll(".modal-backdrop:not([hidden])").forEach((m) => closeModal(m.id));
+        }
+      });
+
+      ["hero-install-btn", "footer-install-btn"].forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener("click", () => openModal("install-modal"));
+      });
+
+      const qrImg = document.getElementById("qr-code-img");
+      const qrFallback = document.getElementById("qr-fallback");
+      const qrIcon = document.getElementById("qr-app-icon");
+      const qrTitle = document.getElementById("qr-modal-title");
+      const qrVersion = document.getElementById("qr-app-version");
+      const qrDirectLink = document.getElementById("qr-direct-link");
+
+      qrImg.addEventListener("error", () => { qrImg.hidden = true; qrFallback.hidden = false; });
+      qrImg.addEventListener("load", () => { qrImg.hidden = false; qrFallback.hidden = true; });
+
+      document.querySelectorAll(".qr-app-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const { name, version, size, icon, url } = btn.dataset;
+          qrTitle.textContent = name;
+          qrVersion.textContent = `${version} • ${size} • SCAN ON PHONE`;
+          qrIcon.src = icon;
+          qrIcon.alt = `${name} icon`;
+          qrDirectLink.href = url;
+          qrFallback.hidden = true;
+          qrImg.hidden = false;
+          qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&margin=8&data=${encodeURIComponent(url)}`;
+          openModal("qr-modal");
+        });
+      });
+
+      document.querySelectorAll(".open-feedback-trigger").forEach((btn) => {
+        btn.addEventListener("click", () => openModal("feedback-modal"));
+      });
+
+      const fbForm = document.getElementById("feedback-form");
+      fbForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const app = document.getElementById("fb-app").value;
+        const topic = document.getElementById("fb-type").value;
+        const sender = document.getElementById("fb-name").value.trim() || "Android User";
+        const message = document.getElementById("fb-message").value.trim();
+
+        const subject = encodeURIComponent(`[${app}] ${topic}`);
+        const body = encodeURIComponent(`Hi Neyazuddin,\n\nApp: ${app}\nTopic: ${topic}\nFrom: ${sender}\n\nMessage:\n${message}\n`);
+        window.location.href = `mailto:neyazuddin8882@gmail.com?subject=${subject}&body=${body}`;
+        closeModal("feedback-modal");
+        fbForm.reset();
+        showToast("Opening email app with your feedback...");
+      });
+    })();
+
+    // 10. Smooth Scroll Reveal & Desktop Spotlight
+    (() => {
+      const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduced && "IntersectionObserver" in window) {
+        document.documentElement.classList.add("reveal-ready");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-revealed");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.06, rootMargin: "0px 0px -20px 0px" });
+
+        document.querySelectorAll(".app-card, .install-step-card, .faq-section, .about-section").forEach((el) => {
+          observer.observe(el);
+        });
+      }
+
+      if (!reduced && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        document.querySelectorAll(".app-card").forEach((card) => {
+          let frame = 0;
+          card.addEventListener("pointermove", (e) => {
+            if (frame) return;
+            frame = requestAnimationFrame(() => {
+              const rect = card.getBoundingClientRect();
+              card.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+              card.style.setProperty("--my", `${e.clientY - rect.top}px`);
+              frame = 0;
+            });
+          });
+        });
+      }
+    })();
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
