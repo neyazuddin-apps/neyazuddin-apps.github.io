@@ -1,45 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | Official App Store</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <title>Privacy Policy — Neyazuddin Apps</title>
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M20 44V20l24 24V20' stroke='%23f0cc8c' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="policy-container">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to App Store</a>
-        
-        <h1>Privacy Policy</h1>
-        <p><strong>Effective Date: May 2026</strong></p>
-        <p>Welcome to our Official App Store. This Privacy Policy applies to all applications provided by us, including but not limited to V Lite Player, Domino Score, Note Diary, Privacy Guard, and PUBG Turbo. We are committed to protecting your personal information and your right to privacy.</p>
-
-        <h2>1. Information We Collect</h2>
-        <p>We believe in data minimization. Our applications are designed to function primarily offline and do not require you to create an account. We <b>do not</b> collect, store, or transmit your personal data (such as name, email, or contacts) to our servers.</p>
-
-        <h2>2. Local Device Permissions</h2>
-        <p>To provide core functionalities, our apps may request specific device permissions:
-        <br>• <b>Storage/Media:</b> Required by V Lite Player to access videos and Note Diary to save files.
-        <br>• <b>Overlay/Draw over other apps:</b> Required by Privacy Guard and V Lite Player (for PiP mode).
-        <br>• <b>Device Administrator:</b> Required by Privacy Guard to prevent unauthorized uninstallation.
-        <br>All data processed via these permissions remains securely on your local device.</p>
-
-        <h2>3. Log Data and Analytics</h2>
-        <p>In the case of an app crash, we may collect Log Data (through third-party products) on your phone. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our service, the time and date of your use, and other non-personal statistics to help us fix bugs.</p>
-
-        <h2>4. Third-Party Services & Links</h2>
-        <p>Our applications and website use third-party services (such as GitHub for hosting and APK distribution). These external platforms have their own Privacy Policies. We strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.</p>
-
-        <h2>5. Security of Your Data</h2>
-        <p>We value your trust in providing us your information, which is why apps like Note Diary and Privacy Guard use advanced local encryption. However, remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
-
-        <h2>6. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.</p>
-
-        <h2>7. Contact Us</h2>
-        <p>If you have any questions, concerns, or suggestions regarding our Privacy Policy or data handling practices, please feel free to reach out to us via our official GitHub repository or community channels.</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.png" data-image-name="logo.png" alt="Neyazuddin Apps logo" class="brand-logo">
+        <span class="brand-name">NEYAZUDDIN <strong>APPS</strong></span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="global-lang-btn" id="legal-lang-toggle" aria-pressed="false" title="Switch language between English and Hindi">
+          <i class="fa-solid fa-language" aria-hidden="true"></i>
+          <span>हिंदी</span>
+        </button>
+        <a class="secondary-button" href="index.html" style="min-height: 36px; padding: 0 14px; font-size: 0.8rem;">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          <span id="back-label">Back to Apps</span>
+        </a>
+      </div>
     </div>
+  </header>
+
+  <main class="legal-main">
+    <article class="legal-card">
+      <!-- English Version -->
+      <div class="legal-lang-block" data-lang="en">
+        <span class="section-kicker">LEGAL &amp; TRANSPARENCY</span>
+        <h1>Privacy Policy</h1>
+        <p class="legal-updated">Effective Date: November 2026 • Neyazuddin Apps</p>
+
+        <p>Welcome to <strong>Neyazuddin Apps</strong>. This Privacy Policy explains how data and device permissions are handled across our website and Android applications—<strong>V Lite Player</strong>, <strong>Domino Score</strong>, <strong>Note Diary</strong>, <strong>Privacy Guard</strong>, <strong>PUBG Turbo</strong>, <strong>Driver Diary</strong>, and <strong>Fee Diary</strong>.</p>
+
+        <h2>1. Offline-First &amp; Zero-Cloud Applications</h2>
+        <ul>
+          <li><strong>Note Diary:</strong> Operates 100% offline with zero cloud storage. Hidden notes, photos, videos, PINs, and Security Questions remain solely on your device's internal storage using AES-256 encryption. Encrypted ZIP backups are generated locally only when you tap <em>Create Backup</em>.</li>
+          <li><strong>Privacy Guard:</strong> Requires no internet permission and collects zero personal or screen data. Custom curtain photos are accessed locally using secure Android URI permissions.</li>
+          <li><strong>V Lite Player &amp; PUBG Turbo:</strong> Designed for offline media playback and offline device status/DND utilities without transmitting your personal files or passwords.</li>
+        </ul>
+
+        <h2>2. Device Permissions Explained</h2>
+        <ul>
+          <li><strong>Storage / Media Access:</strong> Used by <em>V Lite Player</em> to list/play local videos and music, <em>Note Diary</em> to encrypt/hide vault files and export ZIP backups, <em>Privacy Guard</em> to load a user-selected curtain photo, and <em>Fee Diary</em> to save/share student ID cards and receipts.</li>
+          <li><strong>Display Over Other Apps (Overlay):</strong> Used by <em>Privacy Guard</em> for the privacy curtain and <em>V Lite Player</em> for Picture-in-Picture / floating playback.</li>
+          <li><strong>Biometric / Fingerprint:</strong> Used locally by <em>Note Diary</em> only if you enable Fingerprint Unlock in Settings.</li>
+          <li><strong>Phone / DND Access (Optional):</strong> Used by <em>PUBG Turbo</em> only when you explicitly turn on Gaming DND or Ghost Mode to silence or reject calls during matches.</li>
+        </ul>
+
+        <h2>3. Optional Online &amp; Cloud Sync Features</h2>
+        <ul>
+          <li><strong>Driver Diary &amp; Fee Diary:</strong> Support optional Google Firebase cloud backup where configured so you can store and restore your trip/diesel logs or student fee records across devices.</li>
+          <li><strong>Domino Score:</strong> Works offline by default; uses internet only if you choose to Host or Join a <em>Live Match Sync</em> room using a custom Match ID.</li>
+        </ul>
+
+        <h2>4. Crash Logs &amp; Third-Party Services</h2>
+        <p>Apps using Firebase or connected features may log standard non-personal crash diagnostics (device model, Android OS version, timestamp) to help fix bugs. This website uses Google Fonts, Font Awesome, QR generation, and hosts APKs on <strong>GitHub Releases</strong>, which operate under their respective privacy policies.</p>
+
+        <h2>5. Data Security &amp; User Control</h2>
+        <p>Because Note Diary does not upload your vault to any server, we cannot access or reset a forgotten Real PIN remotely. Always set a Security Question and store encrypted ZIP backups safely in Google Drive or your PC.</p>
+
+        <h2>6. Changes &amp; Contact</h2>
+        <p>We may update this policy as apps evolve or launch on Google Play Store. For questions or support, email <a href="mailto:neyazuddin8882@gmail.com">neyazuddin8882@gmail.com</a>.</p>
+      </div>
+
+      <!-- Hindi Version -->
+      <div class="legal-lang-block" data-lang="hi" lang="hi" hidden>
+        <span class="section-kicker">कानूनी जानकारी और पारदर्शिता</span>
+        <h1>गोपनीयता नीति (Privacy Policy)</h1>
+        <p class="legal-updated">प्रभावी तिथि: नवंबर 2026 • Neyazuddin Apps (हिंदी अनुवाद)</p>
+
+        <p><strong>Neyazuddin Apps</strong> में आपका स्वागत है। यह नीति बताती है कि हमारी वेबसाइट और सातों Android ऐप्स—<strong>V Lite Player</strong>, <strong>Domino Score</strong>, <strong>Note Diary</strong>, <strong>Privacy Guard</strong>, <strong>PUBG Turbo</strong>, <strong>Driver Diary</strong>, और <strong>Fee Diary</strong>—में डेटा और अनुमतियों का उपयोग कैसे होता है।</p>
+
+        <h2>1. ऑफलाइन-फर्स्ट और ज़ीरो-क्लाउड ऐप्स</h2>
+        <ul>
+          <li><strong>Note Diary:</strong> यह 100% ऑफलाइन चलता है और कोई भी डेटा क्लाउड पर नहीं भेजता। आपके नोट्स, फोटो, वीडियो, PIN और सिक्योरिटी सवाल AES-256 एन्क्रिप्शन के साथ केवल आपके फोन की इंटरनल स्टोरेज में रहते हैं।</li>
+          <li><strong>Privacy Guard:</strong> इसे इंटरनेट अनुमति की आवश्यकता नहीं है। यह कोई स्क्रीन डेटा रिकॉर्ड या शेयर नहीं करता; कस्टम पर्दे की फोटो सुरक्षित Android URI के ज़रिए लोकल लोड होती है।</li>
+          <li><strong>V Lite Player और PUBG Turbo:</strong> ऑफलाइन वीडियो/म्यूज़िक प्लेबैक और डिवाइस स्टेटस/DND उपयोग के लिए बनाए गए हैं, बिना कोई निजी फाइल या पासवर्ड भेजे।</li>
+        </ul>
+
+        <h2>2. फोन की अनुमतियों (Permissions) का विवरण</h2>
+        <ul>
+          <li><strong>स्टोरेज / मीडिया एक्सेस:</strong> <em>V Lite Player</em> में वीडियो व गाने चलाने, <em>Note Diary</em> में वॉल्ट फाइलें छुपाने व ZIP बैकअप बनाने, <em>Privacy Guard</em> में गैलरी फोटो लगाने, और <em>Fee Diary</em> में छात्र ID कार्ड व रसीद शेयर करने के लिए।</li>
+          <li><strong>अन्य ऐप्स के ऊपर डिस्प्ले (Overlay):</strong> <em>Privacy Guard</em> में प्राइवेसी पर्दा दिखाने और <em>V Lite Player</em> में PiP मोड के लिए।</li>
+          <li><strong>फिंगरप्रिंट / बायोमेट्रिक:</strong> <em>Note Diary</em> में केवल तब उपयोग होता है जब आप सेटिंग्स से Fingerprint Unlock चालू करें।</li>
+          <li><strong>कॉल / DND अनुमति (वैकल्पिक):</strong> <em>PUBG Turbo</em> में केवल तभी काम आती है जब आप स्वयं Gaming DND या Ghost Mode चालू करें।</li>
+        </ul>
+
+        <h2>3. वैकल्पिक ऑनलाइन और क्लाउड सिंक फीचर्स</h2>
+        <ul>
+          <li><strong>Driver Diary और Fee Diary:</strong> सेटअप के अनुसार Google Firebase क्लाउड बैकअप की सुविधा देते हैं ताकि आपका ट्रिप/डीज़ल और फीस रिकॉर्ड सुरक्षित रीस्टोर हो सके।</li>
+          <li><strong>Domino Score:</strong> सामान्यतः ऑफलाइन चलता है; इंटरनेट केवल तभी उपयोग होता है जब आप Match ID से <em>Live Match Sync</em> (Host/Join) चालू करें।</li>
+        </ul>
+
+        <h2>4. क्रैश लॉग और थर्ड-पार्टी सेवाएं</h2>
+        <p>कनेक्टेड सेवाओं के दौरान बग ठीक करने के लिए गैर-व्यक्तिगत तकनीकी जानकारी (डिवाइस मॉडल, Android वर्ज़न) लॉग हो सकती है। वेबसाइट पर Google Fonts, Font Awesome, QR कोड और APK डाउनलोड के लिए <strong>GitHub Releases</strong> का उपयोग होता है।</p>
+
+        <h2>5. डेटा सुरक्षा और आपकी जिम्मेदारी</h2>
+        <p>Note Diary का डेटा हमारे किसी सर्वर पर नहीं जाता, इसलिए यदि आप Real PIN भूल जाते हैं तो हम उसे रिमोट से रीसेट नहीं कर सकते। कृपया Security Question सेट करें और समय-समय पर एन्क्रिप्टेड ZIP बैकअप सुरक्षित जगह सेव करें।</p>
+
+        <h2>6. अपडेट और संपर्क</h2>
+        <p>ऐप्स के अपडेट या Play Store पर आने के साथ यह नीति अपडेट हो सकती है। किसी भी सवाल के लिए संपर्क करें: <a href="mailto:neyazuddin8882@gmail.com">neyazuddin8882@gmail.com</a></p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (() => {
+      const folders = ["images/", "assets/", "img/", "icons/", "app-icons/", "App Icons/"];
+      document.querySelectorAll("img[data-image-name]").forEach((img) => {
+        const filename = img.dataset.imageName;
+        let attempt = 0;
+        const retry = () => { if (attempt < folders.length) img.src = folders[attempt++] + filename; };
+        img.addEventListener("error", retry);
+        if (img.complete && img.naturalWidth === 0) retry();
+      });
+
+      const toggleBtn = document.getElementById("legal-lang-toggle");
+      const blocks = document.querySelectorAll(".legal-lang-block");
+      const backLabel = document.getElementById("back-label");
+      let isHindi = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isHindi = !isHindi;
+        blocks.forEach((b) => {
+          const match = isHindi ? b.dataset.lang === "hi" : b.dataset.lang === "en";
+          b.hidden = !match;
+        });
+        toggleBtn.setAttribute("aria-pressed", String(isHindi));
+        toggleBtn.querySelector("span").textContent = isHindi ? "English" : "हिंदी";
+        backLabel.textContent = isHindi ? "ऐप्स पर वापस" : "Back to Apps";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
 </body>
 </html>
