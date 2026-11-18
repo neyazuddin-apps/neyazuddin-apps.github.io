@@ -1,41 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms & Conditions | Official App Store</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <title>Terms &amp; Conditions — Neyazuddin Apps</title>
+
+  <!-- PWA Manifest & Favicon -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230b1020'/%3E%3Cpath d='M20 44V20l24 24V20' stroke='%23f0cc8c' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="policy-container">
-        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to App Store</a>
-        
-        <h1>Terms & Conditions</h1>
-        <p><strong>Last Updated: May 2026</strong></p>
-        <p>By downloading, installing, or using any of our applications (V Lite Player, Domino Score, Note Diary, Privacy Guard, PUBG Turbo), you agree to be bound by these Terms and Conditions. If you do not agree to all of these terms, do not use the applications.</p>
-
-        <h2>1. License and Usage</h2>
-        <p>We grant you a personal, non-exclusive, non-transferable, limited license to download, install, and use the applications strictly for your personal, non-commercial use. You are not allowed to copy, modify, distribute, sell, or lease any part of our apps or included software, nor may you reverse engineer or attempt to extract the source code of the software.</p>
-
-        <h2>2. Intellectual Property Rights</h2>
-        <p>All trademarks, copyright, database rights, and other intellectual property rights related to the applications and the website (including logos, design, and code) belong directly to the developer. Any unauthorized use of these assets is strictly prohibited.</p>
-
-        <h2>3. User Responsibilities</h2>
-        <p>You are responsible for keeping your device and access to the app secure. We strongly recommend that you do not jailbreak or root your phone, which is the process of removing software restrictions and limitations imposed by the official operating system of your device. It could make your phone vulnerable to malware/viruses and compromise your device's security features.</p>
-
-        <h2>4. App Updates and Maintenance</h2>
-        <p>The apps are currently available for Android OS. The requirements for system compatibility may change, and you will need to download the updates if you want to keep using the apps. We do not promise that we will always update the apps so that they are relevant to you and/or works with the Android version installed on your device. We also reserve the right to stop providing the application at any given time without notice.</p>
-
-        <h2>5. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, in no event shall the developer be liable for any direct, indirect, incidental, special, or consequential damages arising out of or in any way connected with the use of or inability to use the applications, including but not limited to loss of data, hardware failure, or device malfunction.</p>
-
-        <h2>6. Third-Party Content</h2>
-        <p>Some of our applications may allow you to access or view third-party content (e.g., local video files via V Lite Player or internet browsing). We are not responsible for any third-party content you interact with using our tools.</p>
-
-        <h2>7. Governing Law</h2>
-        <p>These Terms and Conditions shall be governed by and construed in accordance with standard international software distribution laws. Any disputes relating to these terms will be subject to exclusive jurisdiction of the competent courts.</p>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="logo.png" data-image-name="logo.png" alt="Neyazuddin Apps logo" class="brand-logo">
+        <span class="brand-name">NEYAZUDDIN <strong>APPS</strong></span>
+      </a>
+      <div class="header-actions">
+        <button type="button" class="global-lang-btn" id="legal-lang-toggle" aria-pressed="false" title="Switch language between English and Hindi">
+          <i class="fa-solid fa-language" aria-hidden="true"></i>
+          <span>हिंदी</span>
+        </button>
+        <a class="secondary-button" href="index.html" style="min-height: 36px; padding: 0 14px; font-size: 0.8rem;">
+          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+          <span id="back-label">Back to Apps</span>
+        </a>
+      </div>
     </div>
+  </header>
+
+  <main class="legal-main">
+    <article class="legal-card">
+      <!-- English Version -->
+      <div class="legal-lang-block" data-lang="en">
+        <span class="section-kicker">TERMS OF USE</span>
+        <h1>Terms &amp; Conditions</h1>
+        <p class="legal-updated">Last Updated: November 2026 • Neyazuddin Apps</p>
+
+        <p>By accessing this website or downloading and installing any application from <strong>Neyazuddin Apps</strong>—including <strong>V Lite Player</strong>, <strong>Domino Score</strong>, <strong>Note Diary</strong>, <strong>Privacy Guard</strong>, <strong>PUBG Turbo</strong>, <strong>Driver Diary</strong>, and <strong>Fee Diary</strong>—you agree to these Terms &amp; Conditions.</p>
+
+        <h2>1. License &amp; Permitted Use</h2>
+        <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use our applications for personal, educational, and legitimate small-business record-keeping purposes (such as trip ledgers in Driver Diary or student fee management in Fee Diary).</p>
+        <p>You may <strong>not</strong> copy, modify, tamper with, redistribute altered APKs under our brand name, store illegal/harmful content, or attempt to reverse-engineer our software.</p>
+
+        <h2>2. Offline Vault, PIN &amp; Uninstallation Responsibility</h2>
+        <ul>
+          <li><strong>PIN &amp; Recovery:</strong> In offline vault apps like <em>Note Diary</em>, you are solely responsible for remembering your Real PIN and setting a Security Question. The developer cannot remotely recover forgotten PINs.</li>
+          <li><strong>Uninstallation Warning:</strong> Uninstalling <em>Note Diary</em> or clearing app storage without first unhiding files or exporting an encrypted ZIP backup to external storage (Google Drive / PC) will permanently erase hidden data.</li>
+        </ul>
+
+        <h2>3. Gaming DND &amp; Call Features</h2>
+        <p>If you enable <em>Ghost Mode</em> or Gaming DND in <strong>PUBG Turbo</strong>, incoming calls may be silenced or rejected automatically. You are responsible for turning these modes off after gameplay so important or emergency calls are not missed.</p>
+
+        <h2>4. Intellectual Property Rights</h2>
+        <p>All brand names, logos, UI designs, website code, and application assets of Neyazuddin Apps belong to the developer. Unauthorized reproduction or impersonation is strictly prohibited.</p>
+
+        <h2>5. Device Security &amp; Updates</h2>
+        <p>We recommend keeping your Android device secure and unrooted. Applications are distributed via official GitHub Releases; compatibility requirements may change over time, and the developer reserves the right to update or discontinue any app without prior notice.</p>
+
+        <h2>6. Limitation of Liability</h2>
+        <p>All applications are provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind. To the maximum extent permitted by law, the developer is not liable for data loss caused by forgotten PINs, device resets, accidental uninstallation, or hardware failure.</p>
+
+        <h2>7. Governing Law &amp; Contact</h2>
+        <p>These Terms &amp; Conditions are governed by the <strong>laws of India</strong>. For support, bug reports, or legal inquiries, contact <a href="mailto:neyazuddin8882@gmail.com">neyazuddin8882@gmail.com</a>.</p>
+      </div>
+
+      <!-- Hindi Version -->
+      <div class="legal-lang-block" data-lang="hi" lang="hi" hidden>
+        <span class="section-kicker">उपयोग की शर्तें</span>
+        <h1>नियम और शर्तें (Terms &amp; Conditions)</h1>
+        <p class="legal-updated">अंतिम अपडेट: नवंबर 2026 • Neyazuddin Apps (हिंदी अनुवाद)</p>
+
+        <p>इस वेबसाइट का उपयोग करने या <strong>Neyazuddin Apps</strong> के किसी भी ऐप—<strong>V Lite Player</strong>, <strong>Domino Score</strong>, <strong>Note Diary</strong>, <strong>Privacy Guard</strong>, <strong>PUBG Turbo</strong>, <strong>Driver Diary</strong>, और <strong>Fee Diary</strong>—को डाउनलोड और इंस्टॉल करने पर आप इन शर्तों से सहमत होते हैं।</p>
+
+        <h2>1. लाइसेंस और अनुमत उपयोग</h2>
+        <p>आपको इन ऐप्स को व्यक्तिगत, शैक्षणिक और वैध छोटे व्यवसाय के हिसाब-किताब (जैसे Driver Diary में ट्रिप/ईंधन लॉग या Fee Diary में छात्र फीस प्रबंधन) के लिए उपयोग करने का लाइसेंस दिया जाता है।</p>
+        <p>आप इन ऐप्स की नकल नहीं कर सकते, इनमें छेड़छाड़ नहीं कर सकते, हमारे नाम से बदले हुए APK नहीं बांट सकते, अवैध/हानिकारक सामग्री नहीं रख सकते, और न ही कोड को reverse-engineer कर सकते हैं।</p>
+
+        <h2>2. ऑफलाइन वॉल्ट, PIN और अनइंस्टॉल की जिम्मेदारी</h2>
+        <ul>
+          <li><strong>PIN और रिकवरी:</strong> <em>Note Diary</em> जैसे ऑफलाइन वॉल्ट ऐप्स में अपना Real PIN याद रखना और Security Question सेट करना आपकी जिम्मेदारी है। डेवलपर भूले हुए PIN को रिमोट से रीसेट नहीं कर सकता।</li>
+          <li><strong>अनइंस्टॉल चेतावनी:</strong> अपनी फाइलें बाहर निकाले (unhide) या एन्क्रिप्टेड ZIP बैकअप (Google Drive / PC में) सेव किए बिना <em>Note Diary</em> को अनइंस्टॉल या 'Clear Storage' करने पर सारा छिपा डेटा हमेशा के लिए मिट जाएगा।</li>
+        </ul>
+
+        <h2>3. गेमिंग DND और कॉल फीचर्स</h2>
+        <p>यदि आप <strong>PUBG Turbo</strong> में <em>Ghost Mode</em> या Gaming DND चालू करते हैं, तो इनकमिंग कॉल म्यूट या रिजेक्ट हो सकती हैं। गेम खेलने के बाद इसे बंद करने की जिम्मेदारी आपकी होगी ताकि ज़रूरी या इमरजेंसी कॉल मिस न हों।</p>
+
+        <h2>4. बौद्धिक संपदा अधिकार</h2>
+        <p>Neyazuddin Apps से जुड़े सभी नाम, लोगो, डिज़ाइन और कोड के अधिकार डेवलपर के पास सुरक्षित हैं। बिना अनुमति इनका उपयोग करना मना है।</p>
+
+        <h2>5. डिवाइस सुरक्षा और अपडेट</h2>
+        <p>हम सलाह देते हैं कि अपना Android फोन रूट (Root) न करें। ऐप्स GitHub Releases के ज़रिए दिए जाते हैं; समय के साथ संगतता बदल सकती है, और डेवलपर बिना पूर्व सूचना के किसी भी ऐप को अपडेट या बंद करने का अधिकार रखता है।</p>
+
+        <h2>6. दायित्व की सीमा (Limitation of Liability)</h2>
+        <p>सभी ऐप्स <strong>"जैसा है" (as is)</strong> के आधार पर बिना किसी गारंटी के दिए जाते हैं। कानून द्वारा अनुमत सीमा तक, PIN भूलने, फोन रीसेट होने, गलती से अनइंस्टॉल करने या हार्डवेयर खराबी से होने वाले डेटा नुकसान के लिए डेवलपर ज़िम्मेदार नहीं होगा।</p>
+
+        <h2>7. लागू कानून और संपर्क</h2>
+        <p>ये नियम और शर्तें <strong>भारत के कानूनों (Laws of India)</strong> के अनुसार लागू होंगे। सहायता या किसी प्रश्न के लिए ईमेल करें: <a href="mailto:neyazuddin8882@gmail.com">neyazuddin8882@gmail.com</a></p>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    (() => {
+      const folders = ["images/", "assets/", "img/", "icons/", "app-icons/", "App Icons/"];
+      document.querySelectorAll("img[data-image-name]").forEach((img) => {
+        const filename = img.dataset.imageName;
+        let attempt = 0;
+        const retry = () => { if (attempt < folders.length) img.src = folders[attempt++] + filename; };
+        img.addEventListener("error", retry);
+        if (img.complete && img.naturalWidth === 0) retry();
+      });
+
+      const toggleBtn = document.getElementById("legal-lang-toggle");
+      const blocks = document.querySelectorAll(".legal-lang-block");
+      const backLabel = document.getElementById("back-label");
+      let isHindi = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isHindi = !isHindi;
+        blocks.forEach((b) => {
+          const match = isHindi ? b.dataset.lang === "hi" : b.dataset.lang === "en";
+          b.hidden = !match;
+        });
+        toggleBtn.setAttribute("aria-pressed", String(isHindi));
+        toggleBtn.querySelector("span").textContent = isHindi ? "English" : "हिंदी";
+        backLabel.textContent = isHindi ? "ऐप्स पर वापस" : "Back to Apps";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
 </body>
 </html>
